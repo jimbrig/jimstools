@@ -15,7 +15,8 @@ pacman::p_load(
   desc,
   fs,
   purrr,
-  attachment
+  attachment,
+  knitr
 )
 
 # initialize package
@@ -34,6 +35,8 @@ usethis::git_sitrep()
 
 # readme
 usethis::use_readme_rmd()
+usethis::use_lifecycle_badge("experimental")
+knitr::knit("README.Rmd")
 
 # initialize functions
 usethis::use_pipe()
