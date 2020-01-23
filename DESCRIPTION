@@ -8,6 +8,27 @@ Authors@R:
            email = "jimmy.briggs@oliverwyman.com")
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
+URL: https://github.com/jimbrig2011/jimstools
+BugReports: https://github.com/jimbrig2011/jimstools/issues
+Imports: 
+    dplyr,
+    fs,
+    fst,
+    htmltools,
+    magrittr,
+    openxlsx,
+    purrr,
+    rlang (>= 0.1.2),
+    shiny,
+    tibble,
+    tidyr,
+    utils
+Suggests: 
+    attachment,
+    desc,
+    devtools,
+    roxygen2,
+    usethis
 Encoding: UTF-8
 Language: es
 LazyData: true

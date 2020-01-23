@@ -14,7 +14,8 @@ pacman::p_load(
   usethis,
   desc,
   fs,
-  purrr
+  purrr,
+  attachment
 )
 
 # initialize package
@@ -22,4 +23,38 @@ usethis::create_package("Personal/jimstools")
 usethis::use_build_ignore("devhist.R")
 usethis::use_roxygen_md()
 usethis::use_namespace()
+usethis::use_package_doc()
+usethis::use_mit_license(name = "Jimmy Briggs")
 devtools::document()
+
+# setup git
+usethis::use_git()
+usethis::use_github()
+usethis::git_sitrep()
+
+# readme
+usethis::use_readme_rmd()
+
+# initialize functions
+usethis::use_pipe()
+usethis::use_tibble()
+usethis::use_tidy_eval()
+usethis::use_r("utils")
+usethis::use_r("pull_unique")
+usethis::use_r("expand_from_vars")
+usethis::use_r("coalesce_join")
+usethis::use_r("cache")
+usethis::use_r("backup_raw")
+usethis::use_r("multi_filt")
+usethis::use_r("compare_to_prior")
+usethis::use_r("group_by_occurrence")
+usethis::use_r("shinytools")
+
+
+devtools::document()
+
+attachment::att_to_description(
+  extra.suggests = c("roxygen2", "devtools", "usethis", "desc", "attachment")
+)
+
+attachment::create_dependencies_file(open_file = FALSE)
