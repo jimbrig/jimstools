@@ -54,10 +54,14 @@ usethis::use_r("group_by_occurrence")
 usethis::use_r("shinytools")
 
 
+usethis::use_vignette("benchmarking")
+
 devtools::document()
 
 attachment::att_to_description(
   extra.suggests = c("roxygen2", "devtools", "usethis", "desc", "attachment")
 )
+
+usethis::use_vignette("benchmarking")
 
 attachment::create_dependencies_file(open_file = FALSE)
