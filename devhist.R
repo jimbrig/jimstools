@@ -20,7 +20,7 @@ pacman::p_load(
 )
 
 # initialize package
-usethis::create_package("Personal/jimstools")
+usethis::create_package("jimstools")
 usethis::use_build_ignore("devhist.R")
 usethis::use_roxygen_md()
 usethis::use_namespace()
@@ -28,9 +28,13 @@ usethis::use_package_doc()
 usethis::use_mit_license(name = "Jimmy Briggs")
 devtools::document()
 
+# edit Rprofile
+usethis::edit_r_profile()
+
 # setup git
 usethis::use_git()
 usethis::use_github()
+usethis::git_vaccinate()
 usethis::git_sitrep()
 
 # readme
@@ -52,6 +56,7 @@ usethis::use_r("multi_filt")
 usethis::use_r("compare_to_prior")
 usethis::use_r("group_by_occurrence")
 usethis::use_r("shinytools")
+usethis::use_r("paste_winslash")
 
 
 usethis::use_vignette("benchmarking")

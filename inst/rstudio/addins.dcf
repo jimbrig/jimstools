@@ -1,0 +1,5 @@
+Name: Paste Converting WinSlash's
+Description: Paste's contents from clipboard (a path) and converts any "\"'s to "\\"'s.
+Binding: paste_winslash
+Interactive: false
+
