@@ -15,11 +15,13 @@ Imports:
     fs,
     fst,
     htmltools,
+    lubridate,
     magrittr,
     openxlsx,
     purrr,
     rlang (>= 0.1.2),
     shiny,
+    stringr,
     tibble,
     tidyr,
     utils
@@ -27,13 +29,14 @@ Suggests:
     attachment,
     desc,
     devtools,
-    roxygen2,
-    usethis,
     knitr,
-    rmarkdown
+    rmarkdown,
+    roxygen2,
+    usethis
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
 Language: es
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.0.2
-VignetteBuilder: knitr
+RoxygenNote: 7.1.1
