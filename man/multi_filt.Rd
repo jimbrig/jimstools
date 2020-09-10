@@ -19,3 +19,18 @@ filtered df
 \description{
 Filter across multiple variables.
 }
+\details{
+NOTE: this function currently only supports character and factor level
+filtering by using the \verb{dplyr::filter(<var> \%in\% c(<filts>))} syntax. For numeric
+and date level filtering will need to incorporate expressions like \verb{<= 5} as
+\code{filt} arguments.
+}
+\examples{
+library(dplyr)
+data <- datasets::iris
+str(data)
+
+iris_filtered <- multi_filt(data, vars = list("Species"), filts = list(c("setosa", "versicolor")))
+
+str(iris_filtered) # filtered for only Species \%in\% c("setosa" and "versicolor")
+}
