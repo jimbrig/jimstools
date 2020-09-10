@@ -11,7 +11,7 @@
 #' @param vars variables
 #' @param filts filters
 #'
-#' @return filtered df
+#' @return a filtered `data.frame` or `tibble`.
 #' @export
 #'
 #' @importFrom dplyr filter

@@ -19,3 +19,6 @@ paste_winslash <- function() {
   return(out)
 
 }
+
+
+# devtools::install_github('Timag/imageclipr')

@@ -51,10 +51,10 @@ group_by_occurrence <- function(dat) {
     dplyr::select(occ_num, eval_dt, clsd_dt, last_dt, reopen_dt, rept_dt, rept_lag) %>%
     dplyr::group_by(occ_num, eval_dt) %>%
     dplyr::summarise(clsd_dt = if (all(is.na(clsd_dt))) NA else max(clsd_dt, na.rm = TRUE),
-              last_dt = if (all(is.na(last_dt))) NA else max(last_dt, na.rm = TRUE),
-              reopen_dt = if (all(is.na(reopen_dt))) NA else max(reopen_dt, na.rm = TRUE),
-              rept_dt = if (all(is.na(rept_dt))) NA else min(rept_dt, na.rm = TRUE),
-              rept_lag = if (all(is.na(rept_lag))) NA else min(as.numeric(rept_lag), na.rm = TRUE)) %>%
+                     last_dt = if (all(is.na(last_dt))) NA else max(last_dt, na.rm = TRUE),
+                     reopen_dt = if (all(is.na(reopen_dt))) NA else max(reopen_dt, na.rm = TRUE),
+                     rept_dt = if (all(is.na(rept_dt))) NA else min(rept_dt, na.rm = TRUE),
+                     rept_lag = if (all(is.na(rept_lag))) NA else min(as.numeric(rept_lag), na.rm = TRUE)) %>%
     dplyr::ungroup()
 
   dat_occ %>%
@@ -66,39 +66,7 @@ group_by_occurrence <- function(dat) {
     dplyr::mutate_at(dplyr::vars(clsd_dt, last_dt), list(~ymd(.))) %>%
     dplyr::select(-open_closed) %>%
     dplyr::mutate(reopen_dt = openxlsx::convertToDate(reopen_dt, origin = "1970-01-01"),
-           rept_dt = ymd(as.character(rept_dt)))
+                  rept_dt = ymd(as.character(rept_dt)))
 
 }
 
-#' Collapse Rows
-#'
-#' for each group, sets the top row of the group to the group's value.  All other
-#' rows in the group are set to "".  See the example
-#'
-#' @param df a data frame
-#' @param variable group variable to be collapsed
-#'
-#' @return a data frame with an updated `variable` column
-#'
-#' @examples
-#' \dontrun{
-#' dat <- tibble(
-#'   group_name = c("a", "a", "b", "b"),
-#'   x = 1:4
-#'   collapseRows(dat, group_name)
-#' )
-#' }
-#'
-#' @importFrom dplyr group_by mutate n ungroup select
-#' @importFrom rlang enquo quo_name
-collapseRows <- function(df, variable){
-
-  group_var <- rlang::enquo(variable)
-
-  df %>%
-    dplyr::group_by(!! group_var) %>%
-    dplyr::mutate(groupRow = 1:dplyr::n()) %>%
-    dplyr::ungroup() %>%
-    dplyr::mutate(!!rlang::quo_name(group_var) := ifelse(groupRow == 1, as.character(!! group_var), "")) %>%
-    dplyr::select(-c(groupRow))
-}
