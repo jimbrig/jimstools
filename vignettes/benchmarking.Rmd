@@ -11,13 +11,17 @@ vignette: >
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  cache = TRUE
+  cache = TRUE,
+  eval = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  error = FALSE
 )
 ```
 
 ## Overview
 
-This Vignette compares variouse I/O and serialization approaches in R.
+This Vignette compares various I/O and serialization approaches in R.
 
 The packages compared are:
 
