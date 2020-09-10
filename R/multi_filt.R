@@ -18,6 +18,10 @@
 #' @importFrom purrr map2
 #' @importFrom rlang quo
 #'
+#' @references [dplyr::filter()]
+#' [rlang tidyeval](https://www.tidyverse.org/blog/2019/06/rlang-0-4-0/)
+#' [tidyeval glue syntax](https://www.tidyverse.org/blog/2020/02/glue-strings-and-tidy-eval/)
+#'
 #' @examples
 #' library(dplyr)
 #' data <- datasets::iris

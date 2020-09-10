@@ -34,3 +34,8 @@ iris_filtered <- multi_filt(data, vars = list("Species"), filts = list(c("setosa
 
 str(iris_filtered) # filtered for only Species \%in\% c("setosa" and "versicolor")
 }
+\references{
+\code{\link[dplyr:filter]{dplyr::filter()}}
+\href{https://www.tidyverse.org/blog/2019/06/rlang-0-4-0/}{rlang tidyeval}
+\href{https://www.tidyverse.org/blog/2020/02/glue-strings-and-tidy-eval/}{tidyeval glue syntax}
+}
