@@ -3,3 +3,9 @@
 ^devhist\.R$
 ^README\.Rmd$
 ^LICENSE\.md$
+^debug\.log$
+^pkgdevt\.R$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$

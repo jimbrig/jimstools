@@ -3,3 +3,6 @@
 .RData
 inst/doc
 debug.log
+
+inst/temp/
+docs

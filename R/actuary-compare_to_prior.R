@@ -2,6 +2,8 @@
 #'
 #' Compares data across evaluations.
 #'
+#' @keywords actuarial
+#'
 #' @param data current data
 #' @param col columns to compare (character vector)
 #'
@@ -9,7 +11,8 @@
 #' @export
 #' @importFrom dplyr group_by mutate lag ungroup if_else
 #' @importFrom rlang quo sym quo_name UQ
-compare_to_prior <- function(data, cols){
+#' @importFrom lubridate is.Date
+compare_to_prior <- function(data, col){
 
   col <- rlang::quo(!! rlang::sym(col))
   prcol <- paste0("pr_", rlang::quo_name(col))
@@ -23,7 +26,7 @@ compare_to_prior <- function(data, cols){
       dplyr::mutate(!!chgcol := dplyr::if_else(rlang::UQ(col) == rlang::UQ(rlang::quo(!! rlang::sym(prcol))),
                                  "No Change", paste0(rlang::UQ(rlang::quo(!! rlang::sym(prcol))),
                                                      "->", !!col)))
-  } else if (is.Date(data[[rlang::quo_name(col)]])) {
+  } else if (lubridate::is.Date(data[[rlang::quo_name(col)]])) {
 
     hold <- data %>%
       dplyr::group_by(clm_num) %>%

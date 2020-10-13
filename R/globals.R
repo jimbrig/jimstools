@@ -1,0 +1,19 @@
+utils::globalVariables(
+  c("groupRow",
+    "clm_num",
+    "eval_dt",
+    "value",
+    ".",
+    "NA",
+    "git",
+    "git_url",
+    "status",
+    "last_dt",
+    "occ_num",
+    "med_pd",
+    "subro",
+    "clsd_dt",
+    "reopen_dt",
+    "rept_dt",
+    "rept_lag")
+)

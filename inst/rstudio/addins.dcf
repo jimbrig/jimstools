@@ -3,3 +3,8 @@ Description: Paste's contents from clipboard (a path) and converts any "\"'s to 
 Binding: paste_winslash
 Interactive: false
 
+Name: Open Project
+Description: Interactively open RStudio Project
+Binding: open_project
+Interactive: false
+Shortcut: Ctrl+Alt+P
