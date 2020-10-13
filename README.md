@@ -9,9 +9,14 @@ jimstools <img src='man/figures/logo.png' align="right" height="120" />
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![R-CMD-Check](https://github.com/jimbrig/jimstools/workflows/R-CMD-check/badge.svg)](https://github.com/jimbrig/jimstools/actions?query=workflow%3AR-CMD-check)
+[![pkgdown](https://github.com/jimbrig/jimstools/workflows/pkgdown/badge.svg)](https://jimbrig.github.io/jimstools/)
+<!-- badges: end -->
+
+***
+
+<!-- badges: start -->
 [![Codecov test
 coverage](https://codecov.io/gh/jimbrig/jimstools/branch/master/graph/badge.svg)](https://codecov.io/gh/jimbrig/jimstools?branch=master)
-[![pkgdown](https://github.com/jimbrig/jimstools/workflows/pkgdown/badge.svg)](https://jimbrig.github.io/jimstools/)
 [![Travis build
 status](https://travis-ci.com/jimbrig/jimstools.svg?branch=master)](https://travis-ci.com/jimbrig/jimstools)
 <!-- badges: end -->
