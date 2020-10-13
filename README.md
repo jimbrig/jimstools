@@ -12,6 +12,8 @@ maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www
 [![Codecov test
 coverage](https://codecov.io/gh/jimbrig/jimstools/branch/master/graph/badge.svg)](https://codecov.io/gh/jimbrig/jimstools?branch=master)
 [![pkgdown](https://github.com/jimbrig/jimstools/workflows/pkgdown/badge.svg)](https://jimbrig.github.io/jimstools/)
+[![Travis build
+status](https://travis-ci.com/jimbrig/jimstools.svg?branch=master)](https://travis-ci.com/jimbrig/jimstools)
 <!-- badges: end -->
 
 Code of Conduct
