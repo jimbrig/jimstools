@@ -130,14 +130,13 @@ usethis::git_sitrep()
 
 # readme
 usethis::use_readme_rmd()
-usethis::use_lifecycle_badge("experimental")
+usethis::use_lifecycle_badge("Maturing")
 knitr::knit("README.Rmd")
 
 # initialize functions
 usethis::use_pipe()
 usethis::use_tibble()
 usethis::use_tidy_eval()
-
 
 usethis::use_r("utils-general")
 usethis::use_r("utils-data")
@@ -180,3 +179,12 @@ attachment::att_to_description(
 usethis::use_vignette("benchmarking")
 
 attachment::create_dependencies_file(open_file = FALSE)
+
+usethis::use_logo("inst/assets/tools.png")
+
+usethis::use_code_of_conduct()
+usethis::use_coverage()
+usethis::proj_sitrep()
+usethis::use_testthat()
+usethis::use_data_raw()
+usethis::use_change

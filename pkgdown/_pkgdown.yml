@@ -1,3 +1,4 @@
+destination: inst/docs
 reference:
 - title: Data Manipulation
   desc: These functions help with data management and manipulation
@@ -34,6 +35,7 @@ reference:
   desc: Functions that are designed to assist with shiny app creation
   contents:
   - '`download_bttn`'
+  - '`collapseRows`'
 
 - title: Utility Functions
   desc: Various utility helper functions
@@ -46,9 +48,10 @@ reference:
 
 - title: Operators
   desc: Operator Helpers
+  contents:
   - '`%notin%`'
   - '`%allin%`'
-  - '`%anyine%`'
+  - '`%anyin%`'
   - '`%nonein%`'
   - '`%partin%`'
 
@@ -57,46 +60,6 @@ reference:
   contents:
   - '`badge`'
   - '`open_docs`'
-
-
-navbar:
-  structure:
-    left:
-    - home
-    - intro
-    - reference
-    - articles
-    - tutorials
-    - news
-    right: github
-  components:
-    home:
-      icon: fa-home fa-lg
-      href: index.html
-    reference:
-      text: Reference
-      href: reference/index.html
-    news:
-      text: Changelog
-      href: news/index.html
-    github:
-      icon: fa-github fa-lg
-      href: https://github.com/jimbrig/jimstools
-
-
-articles:
-- title: User guide
-  desc: ~
-  navbar: User Guide
-  contents:
-  - '`improved-boxes`'
-  - '`box-elements`'
-  - '`extra-elements`'
-  - '`controlbar`'
-  - '`more-skins`'
-  - '`css-preloader`'
-  - '`enhanced-header`'
-
 
 news:
  releases:

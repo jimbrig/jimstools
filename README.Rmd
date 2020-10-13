@@ -13,13 +13,19 @@ knitr::opts_chunk$set(
 )
 ```
 
-# jimstools
+# jimstools <img src='man/figures/logo.png' align="right" height="120" />
+
 
 <!-- badges: start -->
-[![Lifecycle:experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![R-CMD-Check](https://github.com/jimbrig/jimstools/workflows/R-CMD-check/badge.svg)](https://github.com/jimbrig/jimstools/actions?query=workflow%3AR-CMD-check)
+[![Codecov test coverage](https://codecov.io/gh/jimbrig/jimstools/branch/master/graph/badge.svg)](https://codecov.io/gh/jimbrig/jimstools?branch=master)
 [![pkgdown](https://github.com/jimbrig/jimstools/workflows/pkgdown/badge.svg)](https://jimbrig.github.io/jimstools/)
 <!-- badges: end -->
+
+## Code of Conduct
+
+Please note that the jimstools project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 
 
 ## ROADMAP

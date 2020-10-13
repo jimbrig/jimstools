@@ -1,9 +1,10 @@
 # jimstools 0.2.0
 
+Added `pkgdown` and various docs.
+
 ## Functions
 
-* Added 
-
+* Added new RStudio Add-Ins: `open_project` and `paste_winslash`
 
 # jimstools 0.1.0
 

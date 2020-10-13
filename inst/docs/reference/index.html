@@ -8,6 +8,13 @@
 
 <title>Function reference • jimstools</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -40,6 +47,7 @@
 
 
 <meta property="og:title" content="Function reference" />
+<meta property="og:image" content="/logo.png" />
 
 
 
@@ -86,6 +94,23 @@
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    News
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li class="dropdown-header">Releases</li>
+    <li class="dropdown-header">jimstools 0.2.0</li>
+    <li class="dropdown-header">jimstools 0.1.0</li>
+    <li class="dropdown-header">jimstools 0.0.0.9000</li>
+    <li class="divider"></li>
+    <li>
+      <a href="../news/index.html">Changelog</a>
+    </li>
+  </ul>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -121,8 +146,8 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
+          <h2 id="section-data-manipulation" class="hasAnchor"><a href="#section-data-manipulation" class="anchor"></a>Data Manipulation</h2>
+          <p class="section-desc"><p>These functions help with data management and manipulation</p></p>
         </th>
       </tr>
       
@@ -139,28 +164,98 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="badge.html">badge()</a></code> </p>
-        </td>
-        <td><p>Create README badges via img.shields.io</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="caching.html">write_cache()</a></code> <code><a href="caching.html">read_cache()</a></code> </p>
-        </td>
-        <td><p>Caching Utility Functions</p></td>
-      </tr><tr>
-        
-        <td>
           <p><code><a href="coalesce_join.html">coalesce_join()</a></code> </p>
         </td>
         <td><p>Coalesce Join</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="collapseRows.html">collapseRows()</a></code> </p>
+          <p><code><a href="expand_from_vars.html">expand_from_vars()</a></code> </p>
         </td>
-        <td><p>Collapse Rows</p></td>
+        <td><p>Create a Skeleton 'Grid' for Data based on combinations of unique column values</p></td>
       </tr><tr>
+        
+        <td>
+          <p><code><a href="multi_filt.html">multi_filt()</a></code> </p>
+        </td>
+        <td><p>Multi Filt</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-caching" class="hasAnchor"><a href="#section-caching" class="anchor"></a>Caching</h2>
+          <p class="section-desc"><p>Caching helper functions</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="caching.html">write_cache()</a></code> <code><a href="caching.html">read_cache()</a></code> </p>
+        </td>
+        <td><p>Caching Utility Functions</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-rstudio-addins" class="hasAnchor"><a href="#section-rstudio-addins" class="anchor"></a>RStudio Addins</h2>
+          <p class="section-desc"><p>These functions drive their respective RSudio Addins</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="open_project.html">open_project()</a></code> </p>
+        </td>
+        <td><p>Open RStudio Project</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="paste_winslash.html">paste_winslash()</a></code> </p>
+        </td>
+        <td><p>Paste Winslash - Addin Function</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-project-utilities" class="hasAnchor"><a href="#section-project-utilities" class="anchor"></a>Project Utilities</h2>
+          <p class="section-desc"><p>Project Mgmt Helpers</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="get_rstudio_projects.html">get_rstudio_projects()</a></code> </p>
+        </td>
+        <td><p>Get RStudio Projects</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-actuarial-helpers" class="hasAnchor"><a href="#section-actuarial-helpers" class="anchor"></a>Actuarial Helpers</h2>
+          <p class="section-desc"><p>These functions assist with actuarial data transformations</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
         
         <td>
           <p><code><a href="compare_to_prior.html">compare_to_prior()</a></code> </p>
@@ -169,16 +264,42 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="group_by_occurrence.html">group_by_occurrence()</a></code> </p>
+        </td>
+        <td><p>group_by_occurrence</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-shiny-helpers" class="hasAnchor"><a href="#section-shiny-helpers" class="anchor"></a>Shiny Helpers</h2>
+          <p class="section-desc"><p>Functions that are designed to assist with shiny app creation</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
           <p><code><a href="download_bttn.html">download_bttn()</a></code> </p>
         </td>
         <td><p>Download Button</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="expand_from_vars.html">expand_from_vars()</a></code> </p>
-        </td>
-        <td><p>Create a Skeleton 'Grid' for Data based on combinations of unique column values</p></td>
-      </tr><tr>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-utility-functions" class="hasAnchor"><a href="#section-utility-functions" class="anchor"></a>Utility Functions</h2>
+          <p class="section-desc"><p>Various utility helper functions</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
         
         <td>
           <p><code><a href="extract_date.html">extract_date()</a></code> </p>
@@ -193,45 +314,9 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="get_rstudio_projects.html">get_rstudio_projects()</a></code> </p>
-        </td>
-        <td><p>Get RStudio Projects</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="group_by_occurrence.html">group_by_occurrence()</a></code> </p>
-        </td>
-        <td><p>group_by_occurrence</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="is_valid_email.html">is_valid_email()</a></code> <code><a href="is_valid_email.html">is_valid_email()</a></code> </p>
+          <p><code><a href="is_valid_email.html">is_valid_email()</a></code> </p>
         </td>
         <td><p>Ensures a text string is a valid email address</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="multi_filt.html">multi_filt()</a></code> </p>
-        </td>
-        <td><p>Multi Filt</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="open_project.html">open_project()</a></code> </p>
-        </td>
-        <td><p>Open RStudio Project</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="operators.html">`%notin%`</a></code> <code><a href="operators.html">`%allin%`</a></code> <code><a href="operators.html">`%anyin%`</a></code> <code><a href="operators.html">`%nonein%`</a></code> <code><a href="operators.html">`%partin%`</a></code> </p>
-        </td>
-        <td><p>Operators</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="paste_winslash.html">paste_winslash()</a></code> </p>
-        </td>
-        <td><p>Paste Winslash - Addin Function</p></td>
       </tr><tr>
         
         <td>
@@ -244,6 +329,50 @@
           <p><code><a href="set_wd.html">set_wd()</a></code> </p>
         </td>
         <td><p>Set working directory to the path of <strong>current</strong> script</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-operators" class="hasAnchor"><a href="#section-operators" class="anchor"></a>Operators</h2>
+          <p class="section-desc"><p>Operator Helpers</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="operators.html">`%notin%`</a></code> <code><a href="operators.html">`%allin%`</a></code> <code><a href="operators.html">`%anyin%`</a></code> <code><a href="operators.html">`%nonein%`</a></code> <code><a href="operators.html">`%partin%`</a></code> </p>
+        </td>
+        <td><p>Operators</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-meta" class="hasAnchor"><a href="#section-meta" class="anchor"></a>Meta</h2>
+          <p class="section-desc"><p>Metadata, documentation, and imports</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="badge.html">badge()</a></code> </p>
+        </td>
+        <td><p>Create README badges via img.shields.io</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="open_docs.html">open_docs()</a></code> </p>
+        </td>
+        <td><p>Open local version of pkgdown site for <code>jimstools</code></p></td>
       </tr>
     </tbody>
     </table>

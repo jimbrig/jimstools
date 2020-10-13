@@ -34,13 +34,12 @@ attachment::att_amend_desc(
   extra.suggests = c("roxygen2", "devtools", "usethis", "desc", "attachment")
 )
 
-usethis::use_pkgdown("pkgdown/_pkgdown.yml")
+usethis::use_pkgdown("pkgdown/_pkgdown.yml", destdir = "inst/docs")
 
 pkgdown::clean_site()
-
 pkgdown::build_site()
 
-chameleon::build_pkgdown()
+chameleon::build_pkgdown(yml = "pkgdown/_pkgdown.yml", favicon = "pkgdown/favicon")
 chameleon::open_pkgdown_function()
 
 usethis::use_github_action("pkgdown")

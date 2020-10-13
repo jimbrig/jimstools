@@ -8,6 +8,8 @@
 #'
 #' @return a data frame with an updated `variable` column
 #'
+#' @export
+#'
 #' @importFrom dplyr group_by mutate n ungroup select
 #' @importFrom rlang enquo quo_name
 collapseRows <- function(df, variable){

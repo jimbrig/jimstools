@@ -6,6 +6,8 @@
 \alias{jimstools-package}
 \title{jimstools: What the Package Does (One Line, Title Case)}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 What the package does (one paragraph).
 }
 \seealso{
