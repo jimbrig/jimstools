@@ -9,7 +9,7 @@
 #' @export
 #' @importFrom dplyr group_by mutate lag ungroup if_else
 #' @importFrom rlang quo sym quo_name UQ
-compare_to_prior <- function(data, cols){
+compare_to_prior <- function(data, col){
 
   col <- rlang::quo(!! rlang::sym(col))
   prcol <- paste0("pr_", rlang::quo_name(col))

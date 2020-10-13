@@ -3,3 +3,5 @@
 ^devhist\.R$
 ^README\.Rmd$
 ^LICENSE\.md$
+^debug\.log$
+^pkgdevt\.R$
