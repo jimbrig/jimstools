@@ -39,6 +39,8 @@ usethis::use_pkgdown()
 pkgdown::clean_site()
 pkgdown::build_site()
 
+chameleon::build_pkgdown()
+
 usethis::use_github_action_check_standard()
 knitr::knit("README.Rmd")
 
