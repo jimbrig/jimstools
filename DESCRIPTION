@@ -30,7 +30,6 @@ Imports:
     utils
 Suggests: 
     attachment,
-    desc,
     devtools,
     knitr,
     rmarkdown,

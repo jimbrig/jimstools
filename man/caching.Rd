@@ -30,12 +30,14 @@ invisibly attaches object to parent global environment
 Quick caching utility read/write functions utilizing the \code{qs} package.
 }
 \examples{
+\dontrun{
 mydata <- mtcars
 write_cache(mydata) # will save to 'cache/mydata'.
 write_cache(mydata, "mydata-v2", cache_dir = "data/temp") # will save to 'data/temp/mydata-v2'
 
 # read back in
 read_cache(mydata)
+}
 }
 \seealso{
 \code{\link[qs:qread]{qs::qread()}} and \code{\link[qs:qsave]{qs::qsave()}}

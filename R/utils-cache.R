@@ -6,12 +6,14 @@
 #' @seealso [qs::qread()] and [qs::qsave()]
 #' @return invisibly returns object passed to the function.
 #' @examples
+#' \dontrun{
 #' mydata <- mtcars
 #' write_cache(mydata) # will save to 'cache/mydata'.
 #' write_cache(mydata, "mydata-v2", cache_dir = "data/temp") # will save to 'data/temp/mydata-v2'
 #'
 #' # read back in
 #' read_cache(mydata)
+#' }
 NULL
 
 

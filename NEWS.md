@@ -1,6 +1,7 @@
 # jimstools 0.2.0
 
-Added `pkgdown` and various docs.
+* Added `pkgdown` and various docs.
+* Added a `NEWS.md` file to track changes to the package.
 
 ## Functions
 
@@ -26,6 +27,7 @@ Added `pkgdown` and various docs.
 
 ## Functions
 
+* Added `collapseRows`
 * Added `coalesce_join`
 * Added `group_by_occurrence`
 * Added `expand_from_vars`
@@ -41,5 +43,3 @@ Added `pkgdown` and various docs.
 * `jimstools-package` docs
 * README.Rmd with ROADMAP and Resources
 * `License.md`
-
-* Added a `NEWS.md` file to track changes to the package.
