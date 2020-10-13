@@ -18,13 +18,3 @@ a data frame with an updated \code{variable} column
 for each group, sets the top row of the group to the group's value.  All other
 rows in the group are set to "".  See the example
 }
-\examples{
-\dontrun{
-dat <- tibble(
-  group_name = c("a", "a", "b", "b"),
-  x = 1:4
-  collapseRows(dat, group_name)
-)
-}
-
-}

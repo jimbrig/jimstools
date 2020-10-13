@@ -27,3 +27,4 @@ test <- by_occurrence(dat)
 
 
 }
+\keyword{actuarial}

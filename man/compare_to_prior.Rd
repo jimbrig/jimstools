@@ -17,3 +17,4 @@ new data frame with added columns for changes and priors
 \description{
 Compares data across evaluations.
 }
+\keyword{actuarial}

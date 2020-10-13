@@ -16,7 +16,10 @@ pacman::p_load(
   fs,
   purrr,
   attachment,
-  knitr
+  chameleon,
+  checkhelper,
+  knitr,
+  rmarkdown
 )
 
 # initialize package

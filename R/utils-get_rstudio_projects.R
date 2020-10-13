@@ -16,15 +16,15 @@ get_rstudio_projects <- function() {
   path_1 <- fs::path(local_app_dir, "RStudio-Desktop\\projects_settings\\project-id-mappings")
   path_2 <- fs::path(local_app_dir, "RStudio\\projects_settings\\project-id-mappings")
 
-  path_mru_1 <- fs::path(local_app_dir, "RStudio-Desktop\\monitored\\lists\\project_mru")
-  path_mru_2 <- fs::path(local_app_dir, "RStudio\\monitored\\lists\\project_mru")
-
-  mru <- c(readr::read_lines(path_mru_1), readr::read_lines(path_mru_2)) %>%
-    unique() %>%
-    tibble::as_tibble() %>%
-    dplyr::mutate(value = gsub("~", dirname(dirname(local_app_dir)), value, fixed = TRUE)) %>%
-    dplyr::distinct() %>%
-    dplyr::mutate(project_path = dirname(value))
+  # path_mru_1 <- fs::path(local_app_dir, "RStudio-Desktop\\monitored\\lists\\project_mru")
+  # path_mru_2 <- fs::path(local_app_dir, "RStudio\\monitored\\lists\\project_mru")
+  #
+  # mru <- c(readr::read_lines(path_mru_1), readr::read_lines(path_mru_2)) %>%
+  #   unique() %>%
+  #   tibble::as_tibble() %>%
+  #   dplyr::mutate(value = gsub("~", dirname(dirname(local_app_dir)), value, fixed = TRUE)) %>%
+  #   dplyr::distinct() %>%
+  #   dplyr::mutate(project_path = dirname(value))
 
   out <- readr::read_lines(path_1) %>%
     tibble::as_tibble() %>%
@@ -35,24 +35,24 @@ get_rstudio_projects <- function() {
         tidyr::separate(value, c("project_id", "project_path"), sep = "=")
     ) %>%
     dplyr::mutate(project_path = gsub('"', '', .data$project_path, fixed = TRUE),
-                  exists = file.exists(project_path),
+                  exists = file.exists(.data$project_path),
                   project_file = get_rproj_vec(.data$project_path)) %>%
-    dplyr::filter(!is.na(project_file), exists == TRUE) %>%
+    dplyr::filter(!is.na(.data$project_file), .data$exists == TRUE) %>%
     # dplyr::left_join(mru, by = "project_path") %>%
-    dplyr::mutate(project_name = fs::path_ext_remove(basename(project_file)),
-                  git_config_file = fs::path(project_path, ".git", "config"),
-                  git = file.exists(git_config_file),
-                  git_url = ifelse(git == TRUE, get_git_url_vec(.data$git_config_file), NA)) %>%
+    dplyr::mutate(project_name = fs::path_ext_remove(basename(.data$project_file)),
+                  git_config_file = fs::path(.data$project_path, ".git", "config"),
+                  git = file.exists(.data$git_config_file),
+                  git_url = ifelse(.data$git == TRUE, get_git_url_vec(.data$git_config_file), NA)) %>%
     dplyr::select(
-      project_id,
-      project_name,
-      project_path,
-      project_file,
-      git,
-      git_url
+      .data$project_id,
+      .data$project_name,
+      .data$project_path,
+      .data$project_file,
+      .data$git,
+      .data$git_url
     ) %>%
-    dplyr::distinct(project_file, .keep_all = TRUE) %>%
-    dplyr::arrange(!git)
+    dplyr::distinct(.data$project_file, .keep_all = TRUE) %>%
+    dplyr::arrange(!.data$git)
 
 }
 
@@ -90,7 +90,7 @@ get_git_url <- function(path) {
   readr::read_lines(path) %>%
     tibble::as_tibble() %>%
     dplyr::filter(stringr::str_detect(.data$value, "\turl = ")) %>%
-    dplyr::pull(value) %>%
+    dplyr::pull(.data$value) %>%
     stringr::str_sub(8L, nchar(.))
 
 }

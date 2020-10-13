@@ -1,8 +1,8 @@
 
-installr::install.java()
-
-drat::addRepo("stlarepo")
-install.packages("dir2json")
+# installr::install.java()
+#
+# drat::addRepo("stlarepo")
+# install.packages("dir2json")
 
 explore_dir_tree <- function(path = ".") {
 

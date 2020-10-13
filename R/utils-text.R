@@ -8,15 +8,6 @@
 #'
 #' @return a data frame with an updated `variable` column
 #'
-#' @examples
-#' \dontrun{
-#' dat <- tibble(
-#'   group_name = c("a", "a", "b", "b"),
-#'   x = 1:4
-#'   collapseRows(dat, group_name)
-#' )
-#' }
-#'
 #' @importFrom dplyr group_by mutate n ungroup select
 #' @importFrom rlang enquo quo_name
 collapseRows <- function(df, variable){
