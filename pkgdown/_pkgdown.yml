@@ -1,0 +1,105 @@
+reference:
+- title: Data Manipulation
+  desc: These functions help with data management and manipulation
+  contents:
+  - '`backup_raw`'
+  - '`coalesce_join`'
+  - '`expand_from_vars`'
+  - '`multi_filt`'
+
+- title: Caching
+  desc: Caching helper functions
+  contents:
+  - '`write_cache`'
+  - '`read_cache`'
+
+- title: RStudio Addins
+  desc: These functions drive their respective RSudio Addins
+  contents:
+  - '`open_project`'
+  - '`paste_winslash`'
+
+- title: Project Utilities
+  desc: Project Mgmt Helpers
+  contents:
+  - '`get_rstudio_projects`'
+
+- title: Actuarial Helpers
+  desc: These functions assist with actuarial data transformations
+  contents:
+  - '`compare_to_prior`'
+  - '`group_by_occurrence`'
+
+- title: Shiny Helpers
+  desc: Functions that are designed to assist with shiny app creation
+  contents:
+  - '`download_bttn`'
+
+- title: Utility Functions
+  desc: Various utility helper functions
+  contents:
+  - '`extract_date`'
+  - '`extract_num`'
+  - '`is_valid_email`'
+  - '`pull_unique`'
+  - '`set_wd`'
+
+- title: Operators
+  desc: Operator Helpers
+  - '`%notin%`'
+  - '`%allin%`'
+  - '`%anyine%`'
+  - '`%nonein%`'
+  - '`%partin%`'
+
+- title: Meta
+  desc: Metadata, documentation, and imports
+  contents:
+  - '`badge`'
+  - '`open_docs`'
+
+
+navbar:
+  structure:
+    left:
+    - home
+    - intro
+    - reference
+    - articles
+    - tutorials
+    - news
+    right: github
+  components:
+    home:
+      icon: fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    news:
+      text: Changelog
+      href: news/index.html
+    github:
+      icon: fa-github fa-lg
+      href: https://github.com/jimbrig/jimstools
+
+
+articles:
+- title: User guide
+  desc: ~
+  navbar: User Guide
+  contents:
+  - '`improved-boxes`'
+  - '`box-elements`'
+  - '`extra-elements`'
+  - '`controlbar`'
+  - '`more-skins`'
+  - '`css-preloader`'
+  - '`enhanced-header`'
+
+
+news:
+ releases:
+ - text: "jimstools 0.2.0"
+ - text: "jimstools 0.1.0"
+ - text: "jimstools 0.0.0.9000"
