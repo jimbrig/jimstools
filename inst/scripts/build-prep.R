@@ -42,6 +42,7 @@ pkgdown::build_site()
 chameleon::build_pkgdown(yml = "pkgdown/_pkgdown.yml", favicon = "pkgdown/favicon")
 chameleon::open_pkgdown_function()
 
+usethis::use_github_action("test-coverage")
 usethis::use_github_action("pkgdown")
 usethis::use_github_action_check_standard()
 knitr::knit("README.Rmd")
