@@ -87,6 +87,8 @@ usethis::use_vignette("benchmarking")
 
 attachment::create_dependencies_file(open_file = FALSE)
 
+usethis::use_news_md()
+
 
 #  ------------------------------------------------------------------------
 #

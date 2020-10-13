@@ -9,3 +9,4 @@
 ^docs$
 ^pkgdown$
 ^\.github$
+^pkgdown/_pkgdown\.yml$
