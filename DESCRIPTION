@@ -12,11 +12,17 @@ URL: https://github.com/jimbrig2011/jimstools
 BugReports: https://github.com/jimbrig2011/jimstools/issues
 Imports: 
     dplyr,
+    DT,
     fs,
+    grDevices,
     htmltools,
+    listviewer,
     lubridate,
     magrittr,
+    memoise,
     openxlsx,
+    parallel,
+    progress,
     purrr,
     qs,
     readr,
@@ -30,6 +36,7 @@ Imports:
     utils
 Suggests: 
     attachment,
+    desc,
     devtools,
     knitr,
     rmarkdown,

@@ -1,0 +1,35 @@
+---
+title: "TITLE"
+author: "Jimmy Briggs"
+date: `r jimstools::print_date()`
+output: 
+  html_document:
+    code_folding: hide
+    highlight: pygments
+    toc: yes
+    toc_float: yes
+    df_print: kable
+  pdf_document:
+    fig_caption: yes
+    df_print: kable
+fontsize: 10pt
+geometry: margin=0.5in
+header-includes:
+- \usepackage[table]{xcolor}
+- \definecolor{Gray}{gray}{0.85}
+- \rowcolors{2}{white}{Gray}
+classoption: portrait
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(
+  prompt = FALSE,
+  comment = NA,
+  warning = FALSE,
+  message = FALSE,
+  collapse = TRUE,
+  cache = FALSE
+)
+```
+
+## REPORT
