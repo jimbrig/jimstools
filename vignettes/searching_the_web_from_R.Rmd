@@ -1,0 +1,208 @@
+---
+title: "Advanced Search Engine Queries from R"
+author: "Jimmy Briggs"
+date: "11/18/2020"
+output: html_document
+---
+
+**Work in Progress**
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  error = FALSE,
+  warning = FALSE,
+  message = FALSE
+)
+
+library(knitr)
+library(rmarkdown)
+library(jimstools)
+library(googler)
+```
+
+# Streamlining your Development Ecosystem: Searching the Web from R
+
+Programmers are good at engineering software and designing web applications.
+I argue that we can apply the same logic to facilitate an environment which provides 
+a natural, orchestrated flow between the various activities we undertake, 
+both online and in the console.
+
+In this post I use searching the web, a process developers rely on heavily for
+many different reasons, as a basic example of an area for improvement.
+
+I will show you some examples of querying specific search engines 
+directly from your R console as well as provide some pre-configured functions 
+for some of my most common use-cases.
+
+Before showcasing the code, first I want to bring to light some ideas 
+surrounding our daily workflows as developers and how we interact with the web.
+ 
+## Your Mind is a CPU
+
+> “The optimal number of threads in any system is one thread.” - Scott Hanselman
+
+Think of your mind as a CPU (central processing unit) like that on your computer. 
+Each separate task you pursue throughout the day relies on a limited 
+amount of resources, which can be thought of as your bank of available  
+*Random Access Memory*, or RAM.
+
+From this prespective, the idea of multi-tasking becomes *multi-threading*, 
+and as developers we all know that for computers to run asynchronous,
+parallel, multi-threaded processes requires a highly intricate, well
+designed, and deeply thought out infrastructure to work properly 
+without overloading the CPU and crashing the machine. 
+
+Similarly, switching contexts between different digital environments
+causes your mind to have to continuously re-adjust and reboot its underlying 
+resources in order to faciliate the influx of new information in need of being 
+processed.
+
+In other words, it takes time, energy, and resources to get your mind to focus, 
+and every time we switch tasks or contexts, we lose energy that wouldn't have 
+been lost if we had just stayed in one context initially. The fatigue that builds
+up from all of this energy loss can potentially demotivate us, 
+as well as cause mental burnout.
+
+Programmers should strive to reach a **state of flow** in which complete focus 
+can be given to one activity.
+
+This requires determination and discipline in order to keep that focus
+streamlined as well as a proper environment which motivates focus
+instead of scattered, distracted thought. 
+
+The solution to avoiding burnout and unproductive programming 
+habits is to provide an ecosystem where context switching is
+minimized and when needed, streamlined.
+
+## Identifying an Opporitunity
+
+Have you ever wanted to search google directly from R? What about query your 
+organizations Github repos or search for packages on your respective CRAN mirror?
+
+This thought never crossed my mind until I took a second to think about the potential 
+benefits of constructing a system for implementing this in R. 
+
+The problem I found was two-fold: 
+
+1. Searching the web for R specific resources can be frustrating, time-consuming, and difficult. 
+2. The process of switching contexts from R to the browser is unproductive and breaks my natural development flow. 
+
+Identifying these issues, I took it as an opportunity to create something new, and potentially beneficial to others 
+as we developers love to do. 
+
+### Reviewing Current Processes
+
+Although most R developers are extensively familiar with 
+[The DRY Principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) (*Don't repeat yourself*) 
+in programming, many do not attempt to extend the principle outside of their 
+code.
+
+Thinking on the principle further, I realized that the amount of time developers 
+interact with the web through a web browser interface is much larger than we
+may think and is only growing as our dependence on online services and learning
+resources increase exponentially.
+
+For me, the idea of searching from your command prompt or terminal stemmed from
+my repetitive need to search online for some form of information whilst in the 
+midst of a programming endeavor. While there are many amazing API's, SDK's, and
+localized web-oriented frameworks allowing developers to interact with the web 
+from their console, I found myself in need of a more general, simplistic 
+approach to querying information hosted online from my local machine.
+
+Once I stopped to think about my daily processes while developing locally and 
+interacting with the internet, I quickly realized that there is a much larger
+frequency of instances where I am in need of browsing the web than I originally
+would have anticipated. Whether navigating to my web browser to google a new
+concept, review a Github pull request, or even launch a locally hosted shiny
+application, I found that I use my browsers constantly throughout the day.
+
+To name a few examples: 
+
+  - Reviewing a new pull request on Github or searching my backlog of issues assigned to me
+  - Searching for new software or downloading a new version
+  - Searching my cloud storage drives for files or data
+  - Searching my emails for important information
+  - Reviewing online documentation when learning something new
+  - Retrieving a forgotten API Key or account password
+  - Checking on and maintaining a hosted cloud service platform
+  - Watching a demo video on youtube for a new application
+  - Checking my RSS feeds and developer blogs to stay up to date on current news
+  - Searching google for a new library, concept, or framework
+  
+As you can see, there are a variety of instances where interacting with and 
+querying the web has become a routine in our daily development workflows
+and learning processes. 
+
+Additionally, due to the lack of a more streamlined, self-contained
+approach to this reliance on the web while programming, I found myself
+easily distracted my all of the bells and whistles the internet and my 
+browsers have to offer. Between all of the bookmarks, feeds, notifications 
+and variety of browser extensions the simple process of leaving your 
+code and opening your browser has much larger implications than most people realize. 
+
+While this may seem like a minimal interruption to your programming workflow, 
+the fact of the matter is that programming is a form of work which requires 
+a very deep, specific environment and mindset in order to keep your 
+development pipelines productive and efficient. In other words,
+programming is not easy and requires intense focus. 
+
+Therefore, developers should do everything they can 
+to avoid having to switch in and out of the various shallow 
+contexts surrounding our everyday lives while attempting 
+to perform a session of productive coding.
+
+## Developing a Simple Solution
+
+To provide a simple, yet powerful solution to the issues surrounding browsing the 
+internet for necessary resources, I started with my personal browser settings. 
+
+Most web browser providers facilitate a setting where you can configure your own custom 
+configurations for creating search queries to specific web sites using your 
+address bar.
+
+For example, in Chrome if you navigate to Settings > Manage Search Engines you will see 
+a list of default search engine providers such as google, bing, and yahoo as well as 
+some auto-generated engines created by websites you have visited in the past such 
+as Youtube or Medium. 
+
+What most people do not realize is they can add [add their own search engines and keywords]() also. 
+For example, if I want to search Github repositories querying with a specific keyword while 
+filtering for only repositories categorized with the language *R* the query URL would be: `https://github.com/search?q=%slanguage%3Ar`. You can produce this yourself by searching from Github and applying the filters yourself and replaceing the term you searched for with `%s`, simliar to the `sprintf` context. Lastly, assign a keyword of `ghr` and test it out by typing `ghr` in your address bar and pressing tab or enter. Now when you search it will direct you to Github R repositories!
+
+Building on this framework I setup in my browser years ago, I decided to take it one step 
+further by bringing the searching functionality to my personal R package [jimstools](https://github.com/jimbrig/jimstools) focusing on R-specific
+search engines (it can be quite difficult to search effectively for R 
+resources filtering out everything else given R is only one letter).
+
+## Setting up the Search Engines
+
+For setting up the search engines all I needed to do was migrate my browser 
+customized search engine URL's into R by wrapping them in R functions which pass 
+the `%s` syntax as a function argument. 
+
+Here is a list of the search engines I have implemented so far and their functions: 
+
+STOPPED HERE - [Link to Functions on Github]()
+
+- 
+
+
+
+
+
+
+
+## R
+
+Although I do use other terminals, languages, and shells outside of the R 
+environment, most of my development work is done within R and RStudio. 
+Therefore, I chose R as my framework for implementing a set of utility 
+functions to quickly perform advanced search queries online from a wide 
+variety of search engine source domains.
+
+
+
+
+

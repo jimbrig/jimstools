@@ -13,6 +13,7 @@ BugReports: https://github.com/jimbrig2011/jimstools/issues
 Imports: 
     dplyr,
     fs,
+    git2r,
     htmltools,
     lubridate,
     magrittr,
@@ -24,16 +25,16 @@ Imports:
     rstudioapi,
     shiny,
     stringr,
+    tcltk,
     tibble,
     tidyr,
     usethis,
-    utils
+    utils,
+    whoami
 Suggests: 
-    attachment,
-    devtools,
+    googler,
     knitr,
     rmarkdown,
-    roxygen2,
     testthat
 VignetteBuilder: 
     knitr

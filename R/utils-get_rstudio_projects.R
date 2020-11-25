@@ -36,32 +36,40 @@ get_rstudio_projects <- function() {
     ) %>%
     dplyr::mutate(project_path = gsub('"', '', .data$project_path, fixed = TRUE),
                   exists = file.exists(.data$project_path),
-                  project_file = get_rproj_vec(.data$project_path)) %>%
-    dplyr::filter(!is.na(.data$project_file), .data$exists == TRUE) %>%
+                  project_file = as.character(get_rproj_vec(.data$project_path))) %>%
+    dplyr::filter(.data$project_file != "character(0)",
+                  !is.na(.data$project_file),
+                  !is.null(.data$project_file),
+                  .data$exists == TRUE) %>%
     # dplyr::left_join(mru, by = "project_path") %>%
     dplyr::mutate(project_name = fs::path_ext_remove(basename(.data$project_file)),
                   git_config_file = fs::path(.data$project_path, ".git", "config"),
                   git = file.exists(.data$git_config_file),
-                  git_url = ifelse(.data$git == TRUE, get_git_url_vec(.data$git_config_file), NA)) %>%
+                  git_url = ifelse(.data$git == TRUE, get_git_url_vec(.data$git_config_file), NA),
+                  last_modified = file.mtime(.data$project_path)) %>%
     dplyr::select(
       .data$project_id,
       .data$project_name,
       .data$project_path,
       .data$project_file,
       .data$git,
-      .data$git_url
+      .data$git_url,
+      .data$last_modified
     ) %>%
     dplyr::distinct(.data$project_file, .keep_all = TRUE) %>%
-    dplyr::arrange(!.data$git)
+    dplyr::arrange(!.data$git, dplyr::desc(.data$last_modified))
 
+  return(out)
 }
 
 #' @importFrom fs path
-#' @importFrom rstudioapi userIdentity
+#' @importFrom whoami whoami
 get_local_app_dir <- function() {
   fs::path(
     "C:\\Users",
-    rstudioapi::userIdentity(),
+    whoami::whoami()["username"],
+    #Sys.getenv("RSTUDIO_USER_IDENTITY"),
+    #rstudioapi::userIdentity()
     "AppData", "Local"
   )
 }
@@ -71,9 +79,10 @@ get_local_app_dir <- function() {
 get_rproj <- function(path) {
 
   tryCatch({
-    fs::dir_ls(path, type = "file", recurse = TRUE, glob = "*.Rproj")
+    fs::dir_ls(path, type = "file", recurse = TRUE, glob = "*.Rproj") %>%
+      as.character()
   }, error = function(e) {
-    return(NA)
+    return(NULL)
   })
 
 }
