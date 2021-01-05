@@ -14,6 +14,7 @@ Imports:
     dplyr,
     DT,
     fs,
+    git2r,
     grDevices,
     htmltools,
     listviewer,
@@ -30,17 +31,19 @@ Imports:
     rstudioapi,
     shiny,
     stringr,
+    tcltk,
     tibble,
     tidyr,
     usethis,
-    utils
+    utils,
+    whoami
 Suggests: 
+    googler,
     attachment,
     desc,
     devtools,
     knitr,
     rmarkdown,
-    roxygen2,
     testthat
 VignetteBuilder: 
     knitr
