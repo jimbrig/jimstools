@@ -11,6 +11,7 @@ License: MIT + file LICENSE
 URL: https://github.com/jimbrig2011/jimstools
 BugReports: https://github.com/jimbrig2011/jimstools/issues
 Imports: 
+    data.table,
     dplyr,
     fs,
     git2r,
@@ -20,6 +21,7 @@ Imports:
     openxlsx,
     purrr,
     qs,
+    R.utils,
     readr,
     rlang (>= 0.1.2),
     rstudioapi,

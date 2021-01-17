@@ -12,3 +12,8 @@ invisibly returns an RStudio project
 \description{
 Open RStudio Project
 }
+\examples{
+if (interactive()) {
+  open_project()
+}
+}

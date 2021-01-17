@@ -4,7 +4,7 @@
 \alias{get_rstudio_projects}
 \title{Get RStudio Projects}
 \usage{
-get_rstudio_projects()
+get_rstudio_projects(proj_dir = getOption("projects.dir"))
 }
 \value{
 data.frame
