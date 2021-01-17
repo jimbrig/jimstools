@@ -1,0 +1,4 @@
+name: report
+description: >
+   Default Report Template
+create_dir: FALSE
