@@ -39,12 +39,10 @@ Imports:
     whoami
 Suggests: 
     googler,
-    attachment,
-    desc,
-    devtools,
     knitr,
     rmarkdown,
-    testthat
+    testthat,
+    covr
 VignetteBuilder: 
     knitr
 Config/testthat/edition: 2
