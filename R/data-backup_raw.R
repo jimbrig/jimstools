@@ -13,22 +13,6 @@
 #' @return Invisible - this function is used for its side effects
 #' @export
 #'
-#' @examples
-#'
-#' \dontrun{
-#' library(jimstools)
-#' library(fs)
-#'
-#' network_path <- fs::path(
-#' "H:\\ATLRFI", "INDUSTRY", "Rates - Loss Costs", "Exposure_Adjustment_Template",
-#' "2019", "Backup", "Excess Loss Factors", "Raw Data"
-#' )
-#'
-#' local_path <- fs::path("data-raw", "xs-loss-factors")
-#'
-#' backup_raw(network_path, local_path)
-#' }
-#'
 #' @importFrom fs dir_exists dir_create path dir_copy
 #' @importFrom utils fileSnapshot changedFiles
 backup_raw <- function(from_dir, to_dir, cache_dir = "cache", force = FALSE) {

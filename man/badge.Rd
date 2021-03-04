@@ -21,6 +21,3 @@ character string to be pasted into README
 \description{
 Create README badges via img.shields.io
 }
-\examples{
-badge("Client", "Client XYZ", color = "black", url = "https://www.client-xyz.com/en-us")
-}

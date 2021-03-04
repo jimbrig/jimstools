@@ -1,36 +1,28 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-jimstools <img src='man/figures/logo.png' align="right" height="120" />
-=======================================================================
+# jimstools <img src='man/figures/logo.png' align="right" height="120" />
 
 <!-- badges: start -->
 
 [![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![R-CMD-Check](https://github.com/jimbrig/jimstools/workflows/R-CMD-check/badge.svg)](https://github.com/jimbrig/jimstools/actions?query=workflow%3AR-CMD-check)
+[![Codecov test
+coverage](https://codecov.io/gh/jimbrig/jimstools/branch/master/graph/badge.svg)](https://codecov.io/gh/jimbrig/jimstools?branch=master)
 [![pkgdown](https://github.com/jimbrig/jimstools/workflows/pkgdown/badge.svg)](https://jimbrig.github.io/jimstools/)
 [![Travis build
 status](https://travis-ci.com/jimbrig/jimstools.svg?branch=master)](https://travis-ci.com/jimbrig/jimstools)
 <!-- badges: end -->
 
-***
-
-<!-- badges: start -->
-[![Codecov test
-coverage](https://codecov.io/gh/jimbrig/jimstools/branch/master/graph/badge.svg)](https://codecov.io/gh/jimbrig/jimstools?branch=master)
-<!-- badges: end -->
-
-Code of Conduct
----------------
+## Code of Conduct
 
 Please note that the jimstools project is released with a [Contributor
 Code of
 Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
 
-ROADMAP
--------
+## ROADMAP
 
 ### Functions
 
@@ -78,47 +70,32 @@ ROADMAP
 
 ### Reference Repos
 
--   <a href="https://github.com/Ractuary/casdata" class="uri">https://github.com/Ractuary/casdata</a>
-    (Ractuary/casdata)
--   <a href="https://github.com/Ractuary/ractuary-dialect" class="uri">https://github.com/Ractuary/ractuary-dialect</a>
+-   <https://github.com/Ractuary/casdata> (Ractuary/casdata)
+-   <https://github.com/Ractuary/ractuary-dialect>
     (Ractuary/ractuary-dialect)
--   <a href="https://github.com/ropenscilabs/dirdf" class="uri">https://github.com/ropenscilabs/dirdf</a>
-    (ropenscilabs/dirdf)
--   <a href="https://github.com/Ractuary/devtri" class="uri">https://github.com/Ractuary/devtri</a>
-    (Ractuary/devtri)
--   <a href="https://github.com/sfirke/janitor" class="uri">https://github.com/sfirke/janitor</a>
-    (sfirke/janitor)
--   <a href="https://github.com/harrelfe/Hmisc" class="uri">https://github.com/harrelfe/Hmisc</a>
-    (harrelfe/Hmisc)
--   <a href="https://github.com/merlinoa/lossdb" class="uri">https://github.com/merlinoa/lossdb</a>
-    (merlinoa/lossdb)
--   <a href="https://github.com/bradleyboehmke/data-science-learning-resources" class="uri">https://github.com/bradleyboehmke/data-science-learning-resources</a>
+-   <https://github.com/ropenscilabs/dirdf> (ropenscilabs/dirdf)
+-   <https://github.com/Ractuary/devtri> (Ractuary/devtri)
+-   <https://github.com/sfirke/janitor> (sfirke/janitor)
+-   <https://github.com/harrelfe/Hmisc> (harrelfe/Hmisc)
+-   <https://github.com/merlinoa/lossdb> (merlinoa/lossdb)
+-   <https://github.com/bradleyboehmke/data-science-learning-resources>
     (bradleyboehmke/data-science-learning-resources)
--   <a href="https://github.com/rich-iannone/blastula" class="uri">https://github.com/rich-iannone/blastula</a>
-    (rich-iannone/blastula)
--   <a href="https://github.com/haozhu233/kableExtra" class="uri">https://github.com/haozhu233/kableExtra</a>
-    (haozhu233/kableExtra)
--   <a href="https://github.com/ThinkR-open/remedy" class="uri">https://github.com/ThinkR-open/remedy</a>
-    (ThinkR-open/remedy)
--   <a href="https://github.com/alexsanjoseph/compareDF" class="uri">https://github.com/alexsanjoseph/compareDF</a>
+-   <https://github.com/rich-iannone/blastula> (rich-iannone/blastula)
+-   <https://github.com/haozhu233/kableExtra> (haozhu233/kableExtra)
+-   <https://github.com/ThinkR-open/remedy> (ThinkR-open/remedy)
+-   <https://github.com/alexsanjoseph/compareDF>
     (alexsanjoseph/compareDF)
--   <a href="https://github.com/hrbrmstr/githubdashboard" class="uri">https://github.com/hrbrmstr/githubdashboard</a>
+-   <https://github.com/hrbrmstr/githubdashboard>
     (hrbrmstr/githubdashboard)
--   <a href="https://github.com/dcomtois/summarytools" class="uri">https://github.com/dcomtois/summarytools</a>
-    (dcomtois/summarytools)
--   <a href="https://github.com/rstudio/pagedown" class="uri">https://github.com/rstudio/pagedown</a>
-    (rstudio/pagedown)
--   <a href="https://github.com/yihui/tinytex" class="uri">https://github.com/yihui/tinytex</a>
-    (yihui/tinytex)
--   <a href="https://rich-iannone.github.io/pointblank/reference/index.html" class="uri">https://rich-iannone.github.io/pointblank/reference/index.html</a>
+-   <https://github.com/dcomtois/summarytools> (dcomtois/summarytools)
+-   <https://github.com/rstudio/pagedown> (rstudio/pagedown)
+-   <https://github.com/yihui/tinytex> (yihui/tinytex)
+-   <https://rich-iannone.github.io/pointblank/reference/index.html>
     (Function reference)
--   <a href="https://github.com/tidyverse/dtplyr" class="uri">https://github.com/tidyverse/dtplyr</a>
-    (tidyverse/dtplyr)
--   <a href="https://cran.r-project.org/web/packages/digest/index.html" class="uri">https://cran.r-project.org/web/packages/digest/index.html</a>
-    (CRAN - Package digest)
--   <a href="https://github.com/joachim-gassen/ExPanDaR" class="uri">https://github.com/joachim-gassen/ExPanDaR</a>
+-   <https://github.com/tidyverse/dtplyr> (tidyverse/dtplyr)
+-   <https://cran.r-project.org/web/packages/digest/index.html> (CRAN -
+    Package digest)
+-   <https://github.com/joachim-gassen/ExPanDaR>
     (joachim-gassen/ExPanDaR)
--   <a href="https://github.com/JohnCoene/waiter" class="uri">https://github.com/JohnCoene/waiter</a>
-    (JohnCoene/waiter)
--   <a href="https://github.com/tmakowski/sendeR" class="uri">https://github.com/tmakowski/sendeR</a>
-    (tmakowski/sendeR)
+-   <https://github.com/JohnCoene/waiter> (JohnCoene/waiter)
+-   <https://github.com/tmakowski/sendeR> (tmakowski/sendeR)
