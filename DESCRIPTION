@@ -11,10 +11,13 @@ License: MIT + file LICENSE
 URL: https://github.com/jimbrig2011/jimstools
 BugReports: https://github.com/jimbrig2011/jimstools/issues
 Imports: 
+    checkmate,
+    data.table,
     dplyr,
     DT,
     fs,
     git2r,
+    glue,
     grDevices,
     htmltools,
     listviewer,
@@ -39,9 +42,6 @@ Imports:
     whoami
 Suggests: 
     googler,
-    attachment,
-    desc,
-    devtools,
     knitr,
     rmarkdown,
     testthat
