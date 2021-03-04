@@ -71,14 +71,14 @@ usethis::use_r("group_by_occurrence")
 usethis::use_r("shinytools")
 usethis::use_r("paste_winslash")
 usethis::use_r("get_rstudio_projects")
-
+usethis::use_r("launch_rstudio")
 usethis::use_r("icons")
 usethis::use_r("print_date")
 usethis::use_r("colors")
 usethis::use_r("view_list")
 usethis::use_r("quick_tbl")
 usethis::use_r("mappp")
-
+usethis::use_r("strings")
 usethis::use_r("editprof")
 usethis::use_r("editenv")
 
@@ -90,6 +90,8 @@ usethis::use_addin("open_project")
 usethis::use_rmarkdown_template("report", template_description = "Default Report Template")
 
 usethis::use_vignette("benchmarking")
+
+usethis::use_test("strings")
 
 devtools::document()
 

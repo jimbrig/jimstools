@@ -4,7 +4,10 @@
 \alias{get_rstudio_projects}
 \title{Get RStudio Projects}
 \usage{
-get_rstudio_projects()
+get_rstudio_projects(exclude_nonexistant = TRUE)
+}
+\arguments{
+\item{exclude_nonexistant}{Defaults to TRUE}
 }
 \value{
 data.frame
