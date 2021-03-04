@@ -4,20 +4,22 @@
 \name{jimstools-package}
 \alias{jimstools}
 \alias{jimstools-package}
-\title{jimstools: What the Package Does (One Line, Title Case)}
+\title{jimstools: Tools for R}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 What the package does (one paragraph).
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/jimbrig2011/jimstools}
-  \item Report bugs at \url{https://github.com/jimbrig2011/jimstools/issues}
+  \item \url{https://github.com/jimbrig/jimstools}
+  \item Report bugs at \url{https://github.com/jimbrig/jimstools/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Jimmy Briggs \email{jimmy.briggs@oliverwyman.com}
+\strong{Maintainer}: Jimmy Briggs \email{jimmy.briggs@tychobra.com}
 
 }
 \keyword{internal}

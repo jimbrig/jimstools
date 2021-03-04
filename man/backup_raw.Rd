@@ -24,20 +24,3 @@ to a specified local project directory. In addition, a snapshot of the files
 being copied is taken and stored in the specified "cache_dir" so that files
 are only re-copied if changed.
 }
-\examples{
-
-\dontrun{
-library(jimstools)
-library(fs)
-
-network_path <- fs::path(
-"H:\\\\ATLRFI", "INDUSTRY", "Rates - Loss Costs", "Exposure_Adjustment_Template",
-"2019", "Backup", "Excess Loss Factors", "Raw Data"
-)
-
-local_path <- fs::path("data-raw", "xs-loss-factors")
-
-backup_raw(network_path, local_path)
-}
-
-}
