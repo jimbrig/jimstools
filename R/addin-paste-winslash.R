@@ -8,17 +8,12 @@
 #' @importFrom rstudioapi insertText
 paste_winslash <- function() {
 
-  out <- paste0(
-    '"',
-    normalizePath(utils::readClipboard(), winslash = "/"),
-    '"'
-  )
+  out <- as.character(fs::path_norm(utils::readClipboard()))
 
   rstudioapi::insertText(text = out)
 
   return(out)
 
 }
-
 
 # devtools::install_github('Timag/imageclipr')
