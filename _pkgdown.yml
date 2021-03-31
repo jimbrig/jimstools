@@ -1,13 +1,15 @@
 destination: inst/docs
 site_url: https://jimstools.jimbrig.com
 reference:
-- title: Data Manipulation
+- title: Data Manipulation, Exploration, and Documentation
   desc: These functions help with data management and manipulation
   contents:
   - '`backup_raw`'
   - '`coalesce_join`'
   - '`expand_from_vars`'
   - '`multi_filt`'
+  - '`document_df`'
+  - '`mappp`'
 
 - title: Caching
   desc: Caching helper functions
@@ -37,15 +39,8 @@ reference:
   contents:
   - '`download_bttn`'
   - '`collapseRows`'
-
-- title: Utility Functions
-  desc: Various utility helper functions
-  contents:
-  - '`extract_date`'
-  - '`extract_num`'
-  - '`is_valid_email`'
-  - '`pull_unique`'
-  - '`set_wd`'
+  - '`quick_table`'
+  - '`shiny_icons`'
 
 - title: Operators
   desc: Operator Helpers
@@ -56,14 +51,74 @@ reference:
   - '`%nonein%`'
   - '`%partin%`'
 
-- title: Meta
-  desc: Metadata, documentation, and imports
+- title: Aliases
+  desc: Aliased functions
   contents:
-  - '`badge`'
+  - '`AND`'
+  - '`NOR`'
+  - '`OR`'
+  - '`XOR`'
+  - '`neither`'
+  - '`nor`'
+  - '`pow`'
+
+- title: Startup
+  desc: R Startup Helpers
+  contents:
+  - '`editenv`'
+  - '`editprof`'
+  - '`editrprof`'
+
+- title: System
+  desc: Operating System/Computer Utility Functions
+  contents:
+  - '`get_os`'
+  - '`is_32bit_os`'
+  - '`is_64bit_os`'
+  - '`is_inst`'
+  - '`shutdown`'
+  - '`user_info`'
+
+- title: Open, Search, and Browse Functions
+  desc: Convenience functions for quickly opening, searching, or browsing resources
+  contents:
+  - '`browse_fontawesome`'
+  - '`open_gh_repo`'
   - '`open_docs`'
+  - '`open_in_rstudio`'
+  - '`search_finzi`'
+  - '`search_gh`'
+  - '`search_google`'
+  - '`search_metacran`'
+  - '`search_nabble`'
+  - '`search_rproject`'
+  - '`search_rseek`'
+
+- title: Utility Functions
+  desc: Various utility helper functions
+  contents:
+  - '`extract_date`'
+  - '`extract_num`'
+  - '`is_valid_email`'
+  - '`pull_unique`'
+  - '`set_wd`'
+  - '`cs`'
+  - '`print_date`'
+  - '`date_formats`'
+  - '`default_colors`'
+  - '`htmlspecialchars`'
+  - '`in_rstudio`'
+  - '`is_valid_email`'
+  - '`launch_rstudio`'
+  - '`random_password`'
+  - '`badge`'
+  - '`save_pdf`'
+  - '`set_wd`'
+  - '`view_list`'
 
 news:
  releases:
+ - text: "jimstools 0.3.0"
  - text: "jimstools 0.2.0"
  - text: "jimstools 0.1.0"
  - text: "jimstools 0.0.0.9000"

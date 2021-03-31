@@ -53,19 +53,18 @@ is_64bit_os <- function() {
 #' Get user-related information.
 #'
 #' @export
+#'
+#' @concept system
+#'
 #' @examples
 #' \dontrun{\donttest{
 #' user_info()
 #' }}
 user_info <- function() {
 
-  os_info <-
-    c(
-      "Operating system   " = sessionInfo()$running,
-      "Platform "           = sessionInfo()$platform,
-      Sys.getenv(c(
-        "LOGNAME", "USERNAME", "USERPROFILE", "HOME", "R_USER", "R_HOME", "R_LIBS_USER"))
-    ) %>%
+  os_info <- c("Operating system " = sessionInfo()$running,
+               "Platform " = sessionInfo()$platform,
+               Sys.getenv(c("LOGNAME", "USERNAME", "USERPROFILE", "HOME", "R_USER", "R_HOME", "R_LIBS_USER"))) %>%
     as.data.frame()
 
   os_info$. = fs::path(os_info$.)
