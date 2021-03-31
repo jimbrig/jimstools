@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">jimstools</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -87,12 +87,24 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/searching.html">searching</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -102,6 +114,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li class="dropdown-header">Releases</li>
+    <li class="dropdown-header">jimstools 0.3.0</li>
     <li class="dropdown-header">jimstools 0.2.0</li>
     <li class="dropdown-header">jimstools 0.1.0</li>
     <li class="dropdown-header">jimstools 0.0.0.9000</li>
@@ -114,8 +127,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jimbrig2011/jimstools/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/jimbrig/jimstools/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -133,9 +146,44 @@
   <div class="col-md-9 contents">
     <div class="page-header">
       <h1 data-toc-skip>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/jimbrig2011/jimstools/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+      <small>Source: <a href='https://github.com/jimbrig/jimstools/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="jimstools-030" class="section level1">
+<h1 class="page-header" data-toc-text="0.3.0">
+<a href="#jimstools-030" class="anchor"></a>jimstools 0.3.0</h1>
+<div id="package-infrastructure" class="section level2">
+<h2 class="hasAnchor">
+<a href="#package-infrastructure" class="anchor"></a>Package Infrastructure</h2>
+<ul>
+<li>Updated Package Down configurations.</li>
+<li>Removed <code>data-raw</code>.</li>
+<li>Upgraded <code>testthat</code> to edition 3.</li>
+<li>Replaced <code>git2r</code> with <code>gert</code>.</li>
+<li>Removed dependency on <code>grDevices</code>.</li>
+<li>Created an RMarkdown Template.</li>
+<li>Added code coverage.</li>
+</ul>
+</div>
+<div id="bugfixes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#bugfixes" class="anchor"></a>Bugfixes</h2>
+<ul>
+<li>Fixed bug in <code>open_project</code> and <code>open_project.shell</code> to expand path with<code><a href="http://fs.r-lib.org/reference/path_expand.html">fs::path_expand</a></code> in case User’s home directory has a space.</li>
+<li>Fixed bug in <code>get_rstudio_projects</code> where no <code>by</code> argument was specified in <code><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">dplyr::left_join()</a></code>.</li>
+</ul>
+</div>
+<div id="functions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#functions" class="anchor"></a>Functions</h2>
+<ul>
+<li>Added various <em>System</em> functions for Operating System information.</li>
+<li>Added <code>open_gh_repo</code> to open current projects GitHub Repo.</li>
+<li>Added <code>save_pdf</code> to save PDFs.</li>
+<li>Added <code>cs</code> function to wrap unquoted strings in quotes and vecorize with <code><a href="https://rdrr.io/r/base/c.html">c()</a></code>.</li>
+</ul>
+</div>
+</div>
     <div id="jimstools-020" class="section level1">
 <h1 class="page-header" data-toc-text="0.2.0">
 <a href="#jimstools-020" class="anchor"></a>jimstools 0.2.0</h1>
@@ -143,9 +191,9 @@
 <li>Added <code>pkgdown</code> and various docs.</li>
 <li>Added a <code>NEWS.md</code> file to track changes to the package.</li>
 </ul>
-<div id="functions" class="section level2">
+<div id="functions-1" class="section level2">
 <h2 class="hasAnchor">
-<a href="#functions" class="anchor"></a>Functions</h2>
+<a href="#functions-1" class="anchor"></a>Functions</h2>
 <ul>
 <li>Added new RStudio Add-Ins: <code>open_project</code> and <code>paste_winslash</code>
 </li>
@@ -155,9 +203,9 @@
     <div id="jimstools-010" class="section level1">
 <h1 class="page-header" data-toc-text="0.1.0">
 <a href="#jimstools-010" class="anchor"></a>jimstools 0.1.0</h1>
-<div id="functions-1" class="section level2">
+<div id="functions-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#functions-1" class="anchor"></a>Functions</h2>
+<a href="#functions-2" class="anchor"></a>Functions</h2>
 <ul>
 <li>Added <code>multi_filt</code>
 </li>
@@ -185,9 +233,9 @@
     <div id="jimstools-001" class="section level1">
 <h1 class="page-header" data-toc-text="0.0.1">
 <a href="#jimstools-001" class="anchor"></a>jimstools 0.0.1</h1>
-<div id="functions-2" class="section level2">
+<div id="functions-3" class="section level2">
 <h2 class="hasAnchor">
-<a href="#functions-2" class="anchor"></a>Functions</h2>
+<a href="#functions-3" class="anchor"></a>Functions</h2>
 <ul>
 <li>Added <code>collapseRows</code>
 </li>

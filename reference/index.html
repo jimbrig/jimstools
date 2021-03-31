@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">jimstools</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -87,12 +87,24 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/searching.html">searching</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -102,6 +114,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li class="dropdown-header">Releases</li>
+    <li class="dropdown-header">jimstools 0.3.0</li>
     <li class="dropdown-header">jimstools 0.2.0</li>
     <li class="dropdown-header">jimstools 0.1.0</li>
     <li class="dropdown-header">jimstools 0.0.0.9000</li>
@@ -114,8 +127,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/jimbrig2011/jimstools/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/jimbrig/jimstools/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -146,7 +159,7 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-data-manipulation" class="hasAnchor"><a href="#section-data-manipulation" class="anchor"></a>Data Manipulation</h2>
+          <h2 id="section-data-manipulation-exploration-and-documentation" class="hasAnchor"><a href="#section-data-manipulation-exploration-and-documentation" class="anchor"></a>Data Manipulation, Exploration, and Documentation</h2>
           <p class="section-desc"><p>These functions help with data management and manipulation</p></p>
         </th>
       </tr>
@@ -179,6 +192,18 @@
           <p><code><a href="multi_filt.html">multi_filt()</a></code> </p>
         </td>
         <td><p>Multi Filt</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="document_df.html">document_df()</a></code> </p>
+        </td>
+        <td><p>Prints framework for documenting a data frame</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="mappp.html">mappp()</a></code> </p>
+        </td>
+        <td><p>a wrapper around <code><a href='https://purrr.tidyverse.org/reference/map.html'>purrr::map()</a></code></p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -292,6 +317,168 @@
           <p><code><a href="collapseRows.html">collapseRows()</a></code> </p>
         </td>
         <td><p>Collapse Rows</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="quick_table.html">quick_table()</a></code> </p>
+        </td>
+        <td><p>htable
+Create a quick html table using my favorites options for <code><a href='https://rdrr.io/pkg/DT/man/datatable.html'>DT::datatable()</a></code></p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="shiny_icons.html">shiny_icons()</a></code> </p>
+        </td>
+        <td><p>Shiny Icons</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-operators" class="hasAnchor"><a href="#section-operators" class="anchor"></a>Operators</h2>
+          <p class="section-desc"><p>Operator Helpers</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="operators.html">`%notin%`</a></code> <code><a href="operators.html">`%allin%`</a></code> <code><a href="operators.html">`%anyin%`</a></code> <code><a href="operators.html">`%nonein%`</a></code> <code><a href="operators.html">`%partin%`</a></code> </p>
+        </td>
+        <td><p>Operators</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-aliases" class="hasAnchor"><a href="#section-aliases" class="anchor"></a>Aliases</h2>
+          <p class="section-desc"><p>Aliased functions</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="aliases.html">AND()</a></code> <code><a href="aliases.html">OR()</a></code> <code><a href="aliases.html">nor()</a></code> <code><a href="aliases.html">neither()</a></code> <code><a href="aliases.html">NOR()</a></code> <code><a href="aliases.html">NEITHER()</a></code> <code><a href="aliases.html">pow()</a></code> <code><a href="aliases.html">XOR()</a></code> </p>
+        </td>
+        <td><p>Aliases</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-startup" class="hasAnchor"><a href="#section-startup" class="anchor"></a>Startup</h2>
+          <p class="section-desc"><p>R Startup Helpers</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="editenv.html">editenv()</a></code> </p>
+        </td>
+        <td><p>editenv</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="editprof.html">editprof()</a></code> </p>
+        </td>
+        <td><p>editprof</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="startup.html">editrprof()</a></code> <code><a href="startup.html">editrenv()</a></code> </p>
+        </td>
+        <td><p>R Startup Functions</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-system" class="hasAnchor"><a href="#section-system" class="anchor"></a>System</h2>
+          <p class="section-desc"><p>Operating System/Computer Utility Functions</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="get_os.html">get_os()</a></code> <code><a href="get_os.html">is_32bit_os()</a></code> <code><a href="get_os.html">is_64bit_os()</a></code> </p>
+        </td>
+        <td><p>Determine Operating System (OS)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="is_inst.html">is_inst()</a></code> </p>
+        </td>
+        <td><p>is_inst</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="shutdown.html">shutdown()</a></code> </p>
+        </td>
+        <td><p>Shut down the operating system with the command `shutdown'</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="user_info.html">user_info()</a></code> </p>
+        </td>
+        <td><p>Get User-Related Information</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-open-search-and-browse-functions" class="hasAnchor"><a href="#section-open-search-and-browse-functions" class="anchor"></a>Open, Search, and Browse Functions</h2>
+          <p class="section-desc"><p>Convenience functions for quickly opening, searching, or browsing resources</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="browse_fontawesome.html">browse_fontawesome()</a></code> </p>
+        </td>
+        <td><p>Open fontawesome icons webpage</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="open_gh_repo.html">open_gh_repo()</a></code> </p>
+        </td>
+        <td><p>Open Github Repository URL</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="open_docs.html">open_docs()</a></code> </p>
+        </td>
+        <td><p>Open local version of pkgdown site for <code>jimstools</code></p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="open_in_rstudio.html">open_in_rstudio()</a></code> </p>
+        </td>
+        <td><p>Open file in RStudio</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="search.html">search_online()</a></code> <code><a href="search.html">search_gh()</a></code> <code><a href="search.html">search_rseek()</a></code> <code><a href="search.html">search_finzi()</a></code> <code><a href="search.html">search_nabble()</a></code> <code><a href="search.html">search_google()</a></code> <code><a href="search.html">search_rproject()</a></code> <code><a href="search.html">search_metacran()</a></code> </p>
+        </td>
+        <td><p>Generalized Search and Search Engine Examples</p></td>
       </tr>
     </tbody><tbody>
       <tr>
@@ -335,39 +522,55 @@
           <p><code><a href="set_wd.html">set_wd()</a></code> </p>
         </td>
         <td><p>Set working directory to the path of <strong>current</strong> script</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-operators" class="hasAnchor"><a href="#section-operators" class="anchor"></a>Operators</h2>
-          <p class="section-desc"><p>Operator Helpers</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
+      </tr><tr>
         
         <td>
-          <p><code><a href="operators.html">`%notin%`</a></code> <code><a href="operators.html">`%allin%`</a></code> <code><a href="operators.html">`%anyin%`</a></code> <code><a href="operators.html">`%nonein%`</a></code> <code><a href="operators.html">`%partin%`</a></code> </p>
+          <p><code><a href="cs.html">cs()</a></code> </p>
         </td>
-        <td><p>Operators</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-meta" class="hasAnchor"><a href="#section-meta" class="anchor"></a>Meta</h2>
-          <p class="section-desc"><p>Metadata, documentation, and imports</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
+        <td><p>Vector of character strings from list of unquoted names</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="print_date.html">print_date()</a></code> </p>
+        </td>
+        <td><p>Print the current date in a pretty format</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="date_formats.html">date_formats()</a></code> </p>
+        </td>
+        <td><p>Open Date Formatting <code>man</code> page.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="default_colors.html">default_colors()</a></code> </p>
+        </td>
+        <td><p>Vectors of colors for figures</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="htmlspecialchars.html">htmlspecialchars()</a></code> </p>
+        </td>
+        <td><p>Replace HTML special characters with HTML entities</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="in_rstudio.html">in_rstudio()</a></code> </p>
+        </td>
+        <td><p>In RStudio</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="launch_rstudio.html">launch_rstudio()</a></code> </p>
+        </td>
+        <td><p>Launch a new project-less RStudio session</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="random_password.html">random_password()</a></code> </p>
+        </td>
+        <td><p>Generate a random password with a specified length</p></td>
+      </tr><tr>
         
         <td>
           <p><code><a href="badge.html">badge()</a></code> </p>
@@ -376,9 +579,15 @@
       </tr><tr>
         
         <td>
-          <p><code><a href="open_docs.html">open_docs()</a></code> </p>
+          <p><code><a href="save_pdf.html">save_pdf()</a></code> </p>
         </td>
-        <td><p>Open local version of pkgdown site for <code>jimstools</code></p></td>
+        <td><p>save_pdf</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="view_list.html">view_list()</a></code> </p>
+        </td>
+        <td><p>view_list</p></td>
       </tr>
     </tbody>
     </table>
