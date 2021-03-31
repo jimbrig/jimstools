@@ -1,13 +1,11 @@
-git2r::workdir()
-
 #' Open Github Repository URL
 #'
 #' @export
-#' @importFrom git2r remote_url
+#' @importFrom gert git_remote_info
 open_gh_repo <- function() {
 
   if (!dir.exists(".git")) stop("Working directory not a git repository.")
-  git_remote <- git2r::remote_url()
+  git_remote <- gert::git_remote_info()$url
   url <- valid_url(git_remote)
   utils::browseURL(url)
 

@@ -16,9 +16,8 @@ Imports:
     dplyr,
     DT,
     fs,
-    git2r,
+    gert,
     glue,
-    grDevices,
     htmltools,
     listviewer,
     lubridate,
@@ -41,19 +40,14 @@ Imports:
     utils,
     whoami
 Suggests: 
-    attachment,
-    desc,
-    devtools,
     googler,
     knitr,
     rmarkdown,
-    roxygen2,
     testthat
 VignetteBuilder: 
     knitr
-Config/testthat/edition: 2
+Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
-LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1

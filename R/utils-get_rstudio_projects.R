@@ -32,7 +32,8 @@ get_rstudio_projects <- function(exclude_nonexistant = TRUE) {
         dplyr::distinct() %>%
         dplyr::mutate(project_path = gsub('"', '', .data$project_path, fixed = TRUE),
                       exists = file.exists(.data$project_path)) %>%
-        dplyr::filter(.data$exists == TRUE)
+        dplyr::filter(.data$exists == TRUE),
+      by = c("project_path", "exists")
     ) %>%
     dplyr::mutate(
       git_config_file = fs::path(.data$project_path, ".git", "config"),
