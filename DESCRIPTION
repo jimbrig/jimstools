@@ -18,6 +18,7 @@ Imports:
     fs,
     gert,
     glue,
+    grDevices,
     htmltools,
     listviewer,
     lubridate,
@@ -25,6 +26,7 @@ Imports:
     memoise,
     openxlsx,
     parallel,
+    pbmcapply,
     progress,
     purrr,
     qs,
@@ -32,6 +34,7 @@ Imports:
     rlang (>= 0.1.2),
     rstudioapi,
     shiny,
+    stats,
     stringr,
     tcltk,
     tibble,
@@ -40,13 +43,9 @@ Imports:
     utils,
     whoami
 Suggests: 
-    attachment,
-    desc,
-    devtools,
     googler,
     knitr,
     rmarkdown,
-    roxygen2,
     testthat
 VignetteBuilder: 
     knitr

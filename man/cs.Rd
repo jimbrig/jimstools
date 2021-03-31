@@ -6,9 +6,14 @@
 \usage{
 cs(...)
 }
-\description{
+\arguments{
+\item{...}{dots to quote and \code{c()}.
+
 Returns a vector of character strings from list of unquoted names.
-(Copied directly from the Hmisc package).
+(Copied directly from the Hmisc package).}
+}
+\description{
+Vector of character strings from list of unquoted names
 }
 \examples{
 cs(a,cat,dog)

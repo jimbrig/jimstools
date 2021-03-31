@@ -28,13 +28,13 @@ pacman::p_load(
   pkgdown
 )
 
-golem::detach_all_attached()
+# golem::detach_all_attached()
 
 attachment::att_amend_desc(
   extra.suggests = c("roxygen2", "devtools", "usethis", "desc", "attachment")
 )
 
-usethis::use_pkgdown("_pkgdown.yml", destdir = "inst/docs")
+usethis::use_pkgdown("pkgdown/_pkgdown.yml", destdir = "inst/docs")
 
 pkgdown::clean_site()
 pkgdown::build_site()

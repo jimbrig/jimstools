@@ -24,7 +24,7 @@ get_rstudio_projects <- function(exclude_nonexistant = TRUE) {
   proj_df <- parse_proj_path(projs) %>%
     dplyr::distinct() %>%
     dplyr::filter(exists == TRUE) %>%
-    dplyr::mutate(project_path = as.character(fs::path_expand(project_path))) %>%
+    dplyr::mutate(project_path = as.character(fs::path_expand(.data$project_path))) %>%
     dplyr::left_join(
       readr::read_lines(path_2) %>%
         tibble::as_tibble() %>%
@@ -56,14 +56,6 @@ get_rstudio_projects <- function(exclude_nonexistant = TRUE) {
   return(proj_df)
 }
 
-#' #' @importFrom readr read_lines
-#' #' @importFrom stringr str_subset
-#' get_rsudio_projects <- function() {
-#'   file <- path
-#'   projs <- readr::read_lines(file)
-#'   stringr::str_subset(projs, "^\\s*$", negate = TRUE)
-#' }
-
 #' @importFrom tibble tibble
 parse_proj_path <- function(proj_path) {
 
@@ -91,7 +83,7 @@ extract_proj_name <- function(proj_path) {
 }
 
 get_rstudio_version <- function() {
-  rstudioapi:::getVersion()
+  rstudioapi::getVersion()
 }
 
 #' @importFrom fs path file_exists

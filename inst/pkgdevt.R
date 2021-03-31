@@ -87,7 +87,10 @@ usethis::use_r("save_pdf")
 usethis::use_r("open_project")
 usethis::use_addin("open_project")
 
-usethis::use_rmarkdown_template("report", template_description = "Default Report Template")
+usethis::use_rmarkdown_template(
+  "report",
+  template_description = "Default Report Template"
+)
 
 usethis::use_vignette("benchmarking")
 

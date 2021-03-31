@@ -9,6 +9,8 @@
 #'
 #' @name search
 #'
+#' @export
+#'
 #' @keywords search_engines
 #'
 #' @examples

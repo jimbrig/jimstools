@@ -22,7 +22,7 @@ OR  <- `||`
 #' @rdname aliases
 #' @export
 nor <- function(x, y) {
-  not(x | y)
+  !(x | y)
 }
 
 #' @rdname aliases
@@ -32,7 +32,7 @@ neither <- function(x, y) !x & !y
 #' @rdname aliases
 #' @export
 NOR <- function(x, y) {
-  not(x || y)
+  !(x || y)
 }
 
 #' @rdname aliases

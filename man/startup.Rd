@@ -11,7 +11,7 @@ editrprof(scope = c("user", "project"))
 editrenv(scope = c("user", "project"))
 }
 \arguments{
-\item{scope}{}
+\item{scope}{scope - user or project}
 }
 \value{
 invisible

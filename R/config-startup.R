@@ -5,7 +5,7 @@
 #'
 #' @name startup
 #'
-#' @param scope
+#' @param scope scope - user or project
 #'
 #' @return invisible
 #'
@@ -38,11 +38,13 @@
 # }
 
 #' @rdname startup
+#' @importFrom utils file.edit
 editrprof <- function(scope = c("user", "project")) {
   file.edit("~/.config/R/.Rprofile")
 }
 
 #' @rdname startup
+#' @importFrom utils file.edit
 editrenv <- function(scope = c("user", "project")) {
   file.edit("~/.config/R/.Renviron")
 }

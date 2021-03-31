@@ -4,7 +4,7 @@
 #' @export
 #'
 #' @examples
-#' date_print()
+#' print_date()
 print_date <- function() {
   d <- date()
   month <- substr(d,5,7)
@@ -18,9 +18,10 @@ print_date <- function() {
 #' Because I always forget.
 #'
 #' @export
+#' @importFrom utils help
 date_formats <- function() {
 
-  help(strptime, package = "base")
+  utils::help(strptime, package = "base")
 
 }
 

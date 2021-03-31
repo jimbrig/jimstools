@@ -41,7 +41,7 @@ edit_input <- function(ns = NULL, col, lab, dat, choices, id_cols = NULL) {
 
   if (is.null(ns)) ns <- function(x) return(x)
 
-  if (!is.null(id_cols) {
+  if (!is.null(id_cols)) {
     if (col %in% c(id_cols)) {
       class(dat_col) <- c("id", class(dat_col))
     }

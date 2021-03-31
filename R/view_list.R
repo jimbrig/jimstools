@@ -2,7 +2,7 @@
 #'
 #' Interactive view of list structures with [listviewer::jsonedit()]
 #'
-#' @param l list to display
+#' @param list list to display
 #' @param ... options sent through to [listviewer::jsonedit()]
 #'
 #' @export

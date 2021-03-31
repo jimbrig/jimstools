@@ -1,19 +1,20 @@
 ---
-title: "Advanced Search Engine Queries from R"
-author: "Jimmy Briggs"
-date: "11/18/2020"
-output: html_document
+title: "searching"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{searching}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
-
-**Work in Progress**
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   echo = TRUE,
   error = FALSE,
   warning = FALSE,
-  message = FALSE
+  message = FALSE,
+  collapse = TRUE,
+  comment = "#>"
 )
 
 library(knitr)
@@ -21,6 +22,8 @@ library(rmarkdown)
 library(jimstools)
 library(googler)
 ```
+
+**Work in Progress**
 
 # Streamlining your Development Ecosystem: Searching the Web from R
 
@@ -185,14 +188,6 @@ the `%s` syntax as a function argument.
 Here is a list of the search engines I have implemented so far and their functions: 
 
 STOPPED HERE - [Link to Functions on Github]()
-
-- 
-
-
-
-
-
-
 
 ## R
 

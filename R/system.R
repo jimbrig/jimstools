@@ -37,12 +37,16 @@ get_os <- function() {
 
 #' @rdname get_os
 #' @export
+#' @importFrom stringr str_detect
+#' @importFrom stringr str_detect
 is_32bit_os <- function() {
   stringr::str_detect(version$arch, "32$")
 }
 
 #' @rdname get_os
 #' @export
+#' @importFrom stringr str_detect
+#' @importFrom stringr str_detect
 is_64bit_os <- function() {
   stringr::str_detect(version$arch, "64$")
 }
@@ -60,15 +64,18 @@ is_64bit_os <- function() {
 #' \dontrun{\donttest{
 #' user_info()
 #' }}
+#' @importFrom fs path
+#' @importFrom stats setNames
+#' @importFrom utils sessionInfo
 user_info <- function() {
 
-  os_info <- c("Operating system " = sessionInfo()$running,
-               "Platform " = sessionInfo()$platform,
+  os_info <- c("Operating system " = utils::sessionInfo()$running,
+               "Platform " = utils::sessionInfo()$platform,
                Sys.getenv(c("LOGNAME", "USERNAME", "USERPROFILE", "HOME", "R_USER", "R_HOME", "R_LIBS_USER"))) %>%
     as.data.frame()
 
   os_info$. = fs::path(os_info$.)
-  os_info <- setNames(os_info, c("  "))
+  os_info <- stats::setNames(os_info, c("  "))
 
   print(os_info, right = FALSE)
   cat("\n")

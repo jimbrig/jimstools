@@ -13,7 +13,7 @@ save_pdf <- function(file,
                      height = 8.5,
                      jpg = FALSE) {
 
-  invisible(dev.copy2pdf(
+  invisible(grDevices::dev.copy2pdf(
     file = file,
     width = width,
     height = height

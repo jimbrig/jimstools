@@ -7,9 +7,9 @@
 view_list(list, ...)
 }
 \arguments{
-\item{...}{options sent through to \code{\link[listviewer:jsonedit]{listviewer::jsonedit()}}}
+\item{list}{list to display}
 
-\item{l}{list to display}
+\item{...}{options sent through to \code{\link[listviewer:jsonedit]{listviewer::jsonedit()}}}
 }
 \description{
 Interactive view of list structures with \code{\link[listviewer:jsonedit]{listviewer::jsonedit()}}

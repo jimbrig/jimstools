@@ -10,11 +10,12 @@ browse_fontawesome <- function() {
 #'
 #' @return character vector of shiny package icons
 #' @export
+#' @importFrom utils tail
 shiny_icons <- function() {
 
   file.path('www', 'shared', 'fontawesome', 'css', 'all.min.css') %>%
     system.file(package = 'shiny') %>%
-    readLines(warn = FALSE) %>% tail(1L) %>%
+    readLines(warn = FALSE) %>% utils::tail(1L) %>%
     strsplit('.', fixed = TRUE) %>% unlist %>%
     gsub(':before\\{content:".+"\\}', '', . ) %>%
     grep('fa-', ., fixed = TRUE, value = TRUE) %>%
