@@ -20,16 +20,9 @@ This function provides a lightweight alternative to
 \code{\link[utils:installed.packages]{utils::installed.packages()}} by using \link{nzchar} instead.
 }
 \examples{
-# fast
-library(jimstools)
+\dontrun{
 is_inst("dplyr")
-
-# slow
-is_inst2 <- function(pkg) {
-  pkg \%in\% rownames(installed.packages())
 }
-
-is_inst2("dplyr")
 }
 \references{
 \itemize{

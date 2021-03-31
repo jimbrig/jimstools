@@ -4,7 +4,6 @@
 #'
 #' @return Vector of character strings representing colors, in RGB.
 #' @export
-#' @importFrom grDevices rgb2hsv
 #' @keywords utilities
 #' @examples
 #' plot(1:4,rep(1,4),col=default_colors(),pch=19,cex=5)

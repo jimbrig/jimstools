@@ -8,13 +8,12 @@
 #' @param height height of pdf image
 #' @param jpg convert to 300 dpi .jpg file after pdf save?
 #' @export
-#' @importFrom grDevices dev.copy2pdf
 save_pdf <- function(file,
                      width = 11,
                      height = 8.5,
                      jpg = FALSE) {
 
-  invisible(grDevices::dev.copy2pdf(
+  invisible(dev.copy2pdf(
     file = file,
     width = width,
     height = height
