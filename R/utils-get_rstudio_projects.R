@@ -38,7 +38,7 @@ get_rstudio_projects <- function(exclude_nonexistant = TRUE) {
     dplyr::mutate(
       git_config_file = fs::path(.data$project_path, ".git", "config"),
       git = file.exists(.data$git_config_file),
-      git_url = purrr::map_chr(.data$git_config_file, get_git_url), #(.data$git_config_file),
+      git_url = purrr::map_chr(.data$git_config_file, get_git_url),
       last_modified = file.mtime(.data$project_path)
     ) %>%
     dplyr::select(
@@ -162,12 +162,16 @@ get_rproj <- function(path) {
 get_git_url <- function(path) {
 
   if (!file.exists(path)) return(NA_character_)
+  if (all(!stringr::str_detect(readr::read_lines(path), "\turl = "))) {
+    return(NA_character_)
+  }
 
-  readr::read_lines(path) %>%
-    purrr::keep(~ stringr::str_detect(.x, "\turl = ")) %>%
-    stringr::str_sub(8L, nchar(.)) %>%
-    purrr::pluck(1)
-
+  tryCatch({
+    readr::read_lines(path) %>%
+      purrr::keep(~ stringr::str_detect(.x, "\turl = ")) %>%
+      stringr::str_sub(8L, nchar(.)) %>%
+      purrr::pluck(1)
+  }, error = function() NA_character_)
 }
 
 #' @keywords internal
