@@ -104,9 +104,9 @@ check_path <- function(base, ...) {
 #' @importFrom fs path path_expand
 get_path_rstudio_config_dir <- function(..., check = FALSE) {
 
-  rstudio_version <- get_rstudio_version()
+  # rstudio_version <- get_rstudio_version()
 
-  rstudio_dirname <- if (rstudio_version < 1.4) "RStudio-Desktop" else "RStudio"
+  rstudio_dirname <- "RStudio" # if (rstudio_version < 1.4) "RStudio-Desktop" else "RStudio"
 
   base <- switch(get_os(),
                  windows = fs::path(Sys.getenv("LOCALAPPDATA"), rstudio_dirname),
