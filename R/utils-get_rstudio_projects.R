@@ -18,6 +18,7 @@ get_rstudio_projects <- function(exclude_nonexistant = TRUE) {
   local_app_dir <- get_local_app_dir()
   path <- get_path_recent_projects_list()
   path_2 <- fs::path(local_app_dir, "RStudio\\projects_settings\\project-id-mappings")
+  personal_proj_list <- fs::path("~/.R/personal-list-of-rstudio-projects")
 
   projs <- readr::read_lines(path) %>% stringr::str_subset("^\\s*$", negate = TRUE)
 
