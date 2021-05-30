@@ -81,7 +81,8 @@ usethis::use_r("mappp")
 usethis::use_r("strings")
 usethis::use_r("editprof")
 usethis::use_r("editenv")
-
+usethis::use_r("utils-feedback")
+usethis::use_r("create_project")
 usethis::use_r("save_pdf")
 
 usethis::use_r("open_project")
