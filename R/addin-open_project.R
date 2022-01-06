@@ -11,13 +11,17 @@ open_project <- function() {
   hold <- get_rstudio_projects()
   out <- hold$project_file
   projs <- paste0(basename(dirname(out)), " (", basename(dirname(dirname(out))), ")")
-  ask <- utils::menu(projs, TRUE, title = "Select a Project to Open")
-  if (ask == 0) return(0)
-  open <- fs::path_expand(out[ask])
+
   if (in_rstudio()) {
+    ask <- utils::menu(projs, TRUE, title = "Select a Project to Open")
+    if (ask == 0) return(0)
+    open <- fs::path_expand(out[ask])
     rstudioapi::openProject(open, newSession = TRUE)
   } else {
-   shell.exec(open)
+    ask <- tcltk::tk_select.list(projs, title = "Select a Project to Open")
+    if (ask == 0 || ask == "") return(0)
+    open <- fs::path_expand(out[match(ask, projs)])
+    shell.exec(open)
   }
 
 }
