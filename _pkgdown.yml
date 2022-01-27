@@ -27,6 +27,9 @@ reference:
   desc: Project Mgmt Helpers
   contents:
   - '`get_rstudio_projects`'
+  - '`open_project`'
+  - '`in_rstudio`'
+  - '`use_gh_linguist`'
 
 - title: Actuarial Helpers
   desc: These functions assist with actuarial data transformations
