@@ -2,6 +2,7 @@
 % Please edit documentation in R/utils-feedback.R
 \name{feedback}
 \alias{feedback}
+\alias{use_feedback_helpers}
 \alias{msg_field}
 \alias{msg_value}
 \alias{msg_done}
@@ -13,6 +14,8 @@
 \alias{msg_feedback}
 \title{Feedback Message Utility Functions}
 \usage{
+use_feedback_helpers(pkg = ".")
+
 msg_field(x)
 
 msg_value(x)
@@ -32,6 +35,8 @@ msg_code(x)
 msg_feedback(x)
 }
 \arguments{
+\item{pkg}{Package - defaults to "."}
+
 \item{x}{The string passed to various \code{msg_} functions.}
 
 \item{bullet}{What to use for the message's \code{bullet}. Defaults to \code{cli::symbol$bullet}}
@@ -39,6 +44,9 @@ msg_feedback(x)
 \description{
 A set of helper functions for providing verbose feedback to the developer using
 this packages functions.
+
+This function allows a package developer to automatically add these functions
+to their package.
 }
 \seealso{
 \itemize{

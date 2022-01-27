@@ -16,73 +16,6 @@
 #'   - [cli::list_symbols()]
 NULL
 
-#' Use Feedback Helpers
-#'
-#' This function allows a package developer to automatically add these functions
-#' to their package.
-#'
-#' @param pkg Package - defaults to "."
-#'
-#' @export
-#' @rdname feedback
-#'
-#' @importFrom fs file_copy path_package path
-#' @importFrom utils file.edit
-#' @importFrom usethis with_project
-#' @importFrom attachment att_amend_desc
-#' @importFrom devtools document
-use_feedback_helpers <- function(pkg = ".") {
-
-  fs::file_copy(path = fs::path_package(package = "jimstools", "templates/feedback-helpers.R"),
-                new_path = fs::path(pkg, "R", "feedback-helpers.R"),
-                overwrite = TRUE)
-
-  usethis::with_project(path = pkg, code = {
-    attachment::att_amend_desc()
-    devtools::document()
-  })
-
-  file.edit(fs::path(pkg, "R", "feedback-helpers.R"))
-
-}
-
-#' Inform
-#'
-#' @description
-#' A wrapper around [rlang::inform()] for providing feedback to developers using
-#' this packages functions.
-#'
-#' @inheritDotParams rlang::inform
-#'
-#' @family Feedback Utilities
-#' @seealso [rlang::inform()]
-#'
-#' @return feedback in console
-#' @export
-#'
-#' @importFrom rlang inform
-inform <- function(...) {
-  rlang::inform(paste0(...))
-}
-
-#' Indent
-#'
-#' @description
-#' Indentation around various `msg_` feedback functions.
-#'
-#' @param x The string passed to various `msg_` functions.
-#' @param first what to indent with - defaults to `"  "`.
-#' @param indent indentation of next line - defaults to `first`
-#'
-#' @family Feedback Utilities
-#'
-#' @export
-#' @return string
-indent <- function(x, first = "  ", indent = first) {
-  x <- gsub("\n", paste0("\n", indent), x)
-  paste0(first, x)
-}
-
 #' @rdname feedback
 #' @importFrom crayon green
 #' @importFrom glue glue_collapse
@@ -171,4 +104,41 @@ msg_feedback <- function(x) {
   x <- crayon::green(x)
   x <- glue_collapse(x, sep = ", ")
   x
+}
+
+#' Inform
+#'
+#' @description
+#' A wrapper around [rlang::inform()] for providing feedback to developers using
+#' this packages functions.
+#'
+#' @inheritDotParams rlang::inform
+#'
+#' @family Feedback Utilities
+#' @seealso [rlang::inform()]
+#'
+#' @return feedback in console
+#' @export
+#'
+#' @importFrom rlang inform
+inform <- function(...) {
+  rlang::inform(paste0(...))
+}
+
+#' Indent
+#'
+#' @description
+#' Indentation around various `msg_` feedback functions.
+#'
+#' @param x The string passed to various `msg_` functions.
+#' @param first what to indent with - defaults to `"  "`.
+#' @param indent indentation of next line - defaults to `first`
+#'
+#' @family Feedback Utilities
+#'
+#' @export
+#' @return string
+indent <- function(x, first = "  ", indent = first) {
+  x <- gsub("\n", paste0("\n", indent), x)
+  paste0(first, x)
 }
