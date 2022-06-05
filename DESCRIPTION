@@ -8,6 +8,7 @@ License: MIT + file LICENSE
 URL: https://github.com/jimbrig/jimstools
 BugReports: https://github.com/jimbrig/jimstools/issues
 Imports: 
+    attachment (>= 0.2.5.9000),
     checkmate,
     cli,
     crayon,
@@ -51,3 +52,5 @@ Encoding: UTF-8
 Language: en-US
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
+Remotes:  
+    thinkR-open/attachment
