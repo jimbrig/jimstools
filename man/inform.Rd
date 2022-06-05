@@ -10,24 +10,37 @@ inform(...)
 \item{...}{
   Arguments passed on to \code{\link[rlang:abort]{rlang::inform}}
   \describe{
-    \item{\code{message}}{The message to display. Character vectors are
-formatted with \code{\link[rlang:format_error_bullets]{format_error_bullets()}}. The first element
-defines a message header and the rest of the vector defines
-bullets. Bullets named \code{i} and \code{x} define info and error bullets
-respectively, with special Unicode and colour formatting applied
-if possible.
+    \item{\code{message}}{The message to display, formatted as a \strong{bulleted
+list}. The first element is displayed as an \emph{alert} bullet
+prefixed with \code{!} by default. Elements named \code{"*"}, \code{"i"}, and
+\code{"x"} are formatted as regular, info, and cross bullets
+respectively. Se\ifelse{html}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}})` for more
+about bulleted messaging.
 
 If a message is not supplied, it is expected that the message is
-generated lazily through \link[rlang:cnd_message]{conditionMessage()}. In
-that case, \code{class} must be supplied. Only \code{inform()} allows empty
-messages as it is occasionally useful to build user output
-incrementally.}
-    \item{\code{class}}{Subclass of the condition. This allows your users
-to selectively handle the conditions signalled by your functions.}
-    \item{\code{.subclass}}{This argument was renamed to \code{class} in rlang
-0.4.2.  It will be deprecated in the next major version. This is
-for consistency with our conventions for class constructors
-documented in \url{https://adv-r.hadley.nz/s3.html#s3-subclassing}.}
+generated \strong{lazily} through \code{\link[rlang:cnd_header]{cnd_header()}} and \code{\link[rlang:cnd_body]{cnd_body()}}
+methods. In that case, \code{class} must be supplied. Only \code{inform()}
+allows empty messages as it is occasionally useful to build user
+output incrementally.}
+    \item{\code{class}}{Subclass of the condition.}
+    \item{\code{body,footer}}{Additional bullets.}
+    \item{\code{use_cli_format}}{Whether to format \code{message} lazily using
+\href{https://cli.r-lib.org/}{cli} if available. This results in
+prettier and more accurate formatting of messages. See
+\code{\link[rlang:local_use_cli]{local_use_cli()}} to set this condition field by default in your
+package namespace.
+
+If set to \code{TRUE}, \code{message} should be a character vector of
+individual and unformatted lines. Any newline character \code{"\\\n"}
+already present in \code{message} is reformatted by cli's paragraph
+formatter. See \ifelse{html}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}}.}
+    \item{\code{.file}}{A connection or a string specifying where to print the
+message. The default depends on the context, see the \code{stdout} vs
+\code{stderr} section.}
+    \item{\code{.subclass}}{\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}} This argument
+was renamed to \code{class} in rlang 0.4.2 for consistency with our
+conventions for class constructors documented in
+\url{https://adv-r.hadley.nz/s3.html#s3-subclassing}.}
     \item{\code{.frequency}}{How frequently should the warning or message be
 displayed? By default (\code{"always"}) it is displayed at each
 time. If \code{"regularly"}, it is displayed once every 8 hours. If
@@ -36,16 +49,6 @@ time. If \code{"regularly"}, it is displayed once every 8 hours. If
 message. This is used when \code{.frequency} is supplied to recognise
 recurring conditions. This argument must be supplied if
 \code{.frequency} is not set to \code{"always"}.}
-    \item{\code{.file}}{Where the message is printed. This should be a
-connection or character string which will be passed to \code{\link[=cat]{cat()}}.
-
-By default, \code{inform()} prints to standard output in interactive
-sessions and standard error otherwise. This way IDEs can treat
-messages distinctly from warnings and errors, and R scripts can
-still filter out the messages easily by redirecting \code{stderr}. If
-a sink is active, either on output or on messages, messages are
-printed to \code{stderr}. This ensures consistency of behaviour in
-interactive and non-interactive sessions.}
   }}
 }
 \value{

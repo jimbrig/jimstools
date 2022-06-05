@@ -19,11 +19,13 @@ order to exclude certain file types from being detected as a certain programming
 \details{
 By default this function will write \verb{*.js}, \verb{*.html}, and \verb{*.css} to a \code{.gitattributes} file in order for \code{github-linguist} to ignore Javascript, HTML, and CSS languages in your repositories language section.
 
-The resulting file will look like so:\preformatted{# github linguist exclusions:
+The resulting file will look like so:
+
+\if{html}{\out{<div class="sourceCode">}}\preformatted{# github linguist exclusions:
 *.js linguist-vendored
 *.html linguist-vendored
 *.css linguist-vendored
-}
+}\if{html}{\out{</div>}}
 }
 \examples{
 \dontrun{
