@@ -15,3 +15,7 @@
 ^data-raw$
 ^inst/docs$
 ^\.travis\.yml$
+^cliff\.toml$
+^CHANGELOG\.md$
+^doc$
+^Meta$

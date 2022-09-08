@@ -6,12 +6,13 @@
 \usage{
 user_info()
 }
+\value{
+invisibly returns \code{os_info} vector
+}
 \description{
 Get user-related information.
 }
 \examples{
-\dontrun{\donttest{
 user_info()
-}}
+
 }
-\concept{system}
