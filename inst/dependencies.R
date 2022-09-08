@@ -34,9 +34,3 @@ pacman::p_unlock()
 pacman::p_delete(char = to_install)
 
 pak::pak(to_install)
-
-# for (i in to_install) {
-#   message(paste("     installing", i))
-#   install.packages(i)
-# }
-

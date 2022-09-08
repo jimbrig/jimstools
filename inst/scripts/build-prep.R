@@ -28,7 +28,7 @@ pacman::p_load(
   pkgdown
 )
 
-# golem::detach_all_attached()
+golem::detach_all_attached()
 
 attachment::att_amend_desc(
   extra.suggests = c("roxygen2", "devtools", "usethis", "desc", "attachment")
@@ -39,7 +39,8 @@ usethis::use_pkgdown("pkgdown/_pkgdown.yml", destdir = "inst/docs")
 pkgdown::clean_site()
 pkgdown::build_site()
 
-chameleon::build_pkgdown(yml = "pkgdown/_pkgdown.yml", favicon = "pkgdown/favicon")
+chameleon::build_pkgdown(yml = "pkgdown/_pkgdown.yml",
+                         favicon = "pkgdown/favicon")
 chameleon::open_pkgdown_function()
 
 usethis::use_coverage()
@@ -60,6 +61,8 @@ cat(globals_out, file = "R/globals.R", sep = "\n", append = TRUE)
 usethis::edit_file("R/globals.R")
 
 devtools::check()
+devtools::check_man()
+devtools::
 
 devtools::test()
 
@@ -67,5 +70,7 @@ devtools::lint()
 
 devtools::build()
 
-# devtools::release()
+devtools::build_vignettes()
+devtools::build_manual()
+devtools::build_readme()
 
