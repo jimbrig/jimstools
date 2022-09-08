@@ -9,7 +9,6 @@ reference:
   - '`expand_from_vars`'
   - '`multi_filt`'
   - '`document_df`'
-  - '`mappp`'
 
 - title: Caching
   desc: Caching helper functions
@@ -28,6 +27,10 @@ reference:
   contents:
   - '`get_rstudio_projects`'
   - '`open_project`'
+  - '`create_project`'
+  - '`create_rstudio_project`'
+  - '`open_pkgdown`'
+  - '`render_template`'
   - '`in_rstudio`'
   - '`use_gh_linguist`'
 
@@ -119,8 +122,20 @@ reference:
   - '`set_wd`'
   - '`view_list`'
 
+
+- title: Feedback Helpers
+  desc: Functions providing user feedback in the console
+  contents:
+  - '`feedback`'
+  - '`inform`'
+  - '`indent`'
+  - '`extract_after`'
+  - '`extract_before`'
+  - '`extract_between`'
+
 news:
  releases:
+ - text: "jimstools 0.4.0"
  - text: "jimstools 0.3.0"
  - text: "jimstools 0.2.0"
  - text: "jimstools 0.1.0"

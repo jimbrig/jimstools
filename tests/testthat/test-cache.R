@@ -1,5 +1,3 @@
-context("caching")
-
 dirr <- tempdir()
 dat <- mtcars
 

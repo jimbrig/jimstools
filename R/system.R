@@ -51,19 +51,18 @@ is_64bit_os <- function() {
   stringr::str_detect(version$arch, "64$")
 }
 
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #' Get User-Related Information
 #'
+#' @description
 #' Get user-related information.
+#'
+#' @examples
+#' user_info()
 #'
 #' @export
 #'
-#' @concept system
+#' @return invisibly returns `os_info` vector
 #'
-#' @examples
-#' \dontrun{\donttest{
-#' user_info()
-#' }}
 #' @importFrom fs path
 #' @importFrom stats setNames
 #' @importFrom utils sessionInfo

@@ -17,10 +17,10 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-library(knitr)
-library(rmarkdown)
-library(jimstools)
-library(googler)
+# library(knitr)
+# library(rmarkdown)
+# library(jimstools)
+# library(googler)
 ```
 
 **Work in Progress**

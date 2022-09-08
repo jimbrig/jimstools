@@ -28,7 +28,7 @@ pacman::p_load(
   pkgdown
 )
 
-# golem::detach_all_attached()
+golem::detach_all_attached()
 
 attachment::att_amend_desc(
   extra.suggests = c("roxygen2", "devtools", "usethis", "desc", "attachment")
@@ -39,9 +39,11 @@ usethis::use_pkgdown("pkgdown/_pkgdown.yml", destdir = "inst/docs")
 pkgdown::clean_site()
 pkgdown::build_site()
 
-chameleon::build_pkgdown(yml = "_pkgdown.yml", favicon = "pkgdown/favicon")
+chameleon::build_pkgdown(yml = "pkgdown/_pkgdown.yml",
+                         favicon = "pkgdown/favicon")
 chameleon::open_pkgdown_function()
 
+usethis::use_coverage()
 usethis::use_github_action("test-coverage")
 usethis::use_github_action("pkgdown")
 usethis::use_github_action_check_standard()
@@ -50,8 +52,8 @@ knitr::knit("README.Rmd")
 devtools::load_all()
 devtools::document()
 
-devtools::spell_check()
 spelling::update_wordlist()
+devtools::spell_check()
 
 globals <- checkhelper::get_no_visible()
 globals_out <- paste0('"', unique(globals$globalVariables$variable), '"')
@@ -59,6 +61,7 @@ cat(globals_out, file = "R/globals.R", sep = "\n", append = TRUE)
 usethis::edit_file("R/globals.R")
 
 devtools::check()
+devtools::check_man()
 
 devtools::test()
 
@@ -66,5 +69,7 @@ devtools::lint()
 
 devtools::build()
 
-devtools::release()
+devtools::build_vignettes()
+devtools::build_manual()
+devtools::build_readme()
 
