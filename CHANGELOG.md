@@ -6,6 +6,11 @@
 ### Features
 
 - Add git-cliff action
+- Enhance GHA
+
+### Miscellaneous Tasks
+
+- Autopublish 2022-09-08T04:55:10Z
 
 ## [0.4.0] - 2022-09-08
 
