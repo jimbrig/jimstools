@@ -13,6 +13,7 @@ Imports:
     cli,
     crayon,
     data.table,
+    devtools,
     dplyr,
     DT,
     fs,
@@ -41,16 +42,15 @@ Imports:
     whisker,
     whoami
 Suggests: 
-    googler,
     knitr,
     rmarkdown,
     testthat
 VignetteBuilder: 
     knitr
+Remotes: 
+    thinkR-open/attachment
 Config/testthat/edition: 3
 Encoding: UTF-8
 Language: en-US
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
-Remotes:  
-    thinkR-open/attachment
