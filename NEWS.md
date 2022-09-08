@@ -1,6 +1,50 @@
 # jimstools 0.4.0
+> Released 2022-09-08
 
+## Features
 
+- Add new use_gh_linguist function
+- Add cliff.toml and Changelog to .rbuildignore
+- Add new suggested packages to DESCRIPTION
+- Enhance/correct build-prep script
+- Add git-cliff action
+- Enhance GHA
+
+## Bug Fixes
+
+- Open_project git config URL
+- Get_rstudio_projects reliant on rstudio
+- Fix open_project methods
+- Fix DESCRIPTION deps and remotes
+- Fix NAMESPACE import/exports
+- Fix issues for create_project() and add roxygen
+- Fix shutdown functions example
+- Fix unnecessary vignette library calls
+- Fix pkgdown enumerations
+- Fix system functions
+- Reomove outdated testthat context
+
+## Configuration
+
+- Update DESCRIPTION
+- Add .gitattributes for linguist
+- Bump Roxygen version in DESCRIPTION
+- Edit .Rproj
+- Add remotes
+
+## Documentation
+
+- Re-doc man pages
+- Update cliff.toml config
+- Refresh man pages
+- Update wordlist
+- Update README badges
+- Refresh man pages
+- Refresh man
+
+## Refactoring
+
+- Refactor lines to be linted
 
 # jimstools 0.3.0
 
