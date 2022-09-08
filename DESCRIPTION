@@ -1,6 +1,6 @@
 Package: jimstools
 Title: Tools for R
-Version: 0.3.0
+Version: 0.4.0
 Authors@R: 
     person("Jimmy", "Briggs", , "jimmy.briggs@tychobra.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
