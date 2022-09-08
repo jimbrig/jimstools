@@ -12,16 +12,20 @@ inform(...)
   \describe{
     \item{\code{message}}{The message to display, formatted as a \strong{bulleted
 list}. The first element is displayed as an \emph{alert} bullet
-prefixed with \code{!} by default. Elements named \code{"*"}, \code{"i"}, and
-\code{"x"} are formatted as regular, info, and cross bullets
-respectively. Se\ifelse{html}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}})` for more
-about bulleted messaging.
+prefixed with \code{!} by default. Elements named \code{"*"}, \code{"i"}, \code{"v"},
+\code{"x"}, and \code{"!"} are formatted as regular, info, success,
+failure, and error bullets respectively. Se\ifelse{html}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}})`
+for more about bulleted messaging.
 
 If a message is not supplied, it is expected that the message is
 generated \strong{lazily} through \code{\link[rlang:cnd_header]{cnd_header()}} and \code{\link[rlang:cnd_body]{cnd_body()}}
 methods. In that case, \code{class} must be supplied. Only \code{inform()}
 allows empty messages as it is occasionally useful to build user
-output incrementally.}
+output incrementally.
+
+If a function, it is stored in the \code{header} field of the error
+condition. This acts as a \code{\link[rlang:cnd_header]{cnd_header()}} method that is invoked
+lazily when the error message is displayed.}
     \item{\code{class}}{Subclass of the condition.}
     \item{\code{body,footer}}{Additional bullets.}
     \item{\code{use_cli_format}}{Whether to format \code{message} lazily using
