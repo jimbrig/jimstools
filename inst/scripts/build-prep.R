@@ -62,7 +62,6 @@ usethis::edit_file("R/globals.R")
 
 devtools::check()
 devtools::check_man()
-devtools::
 
 devtools::test()
 
