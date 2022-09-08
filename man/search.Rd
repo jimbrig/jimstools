@@ -68,21 +68,21 @@ advanced search feature to query only R-Project domain sites via the
 }
 \section{Functions}{
 \itemize{
-\item \code{search_gh}: 
+\item \code{search_gh()}: 
 
-\item \code{search_rseek}: 
+\item \code{search_rseek()}: 
 
-\item \code{search_finzi}: 
+\item \code{search_finzi()}: 
 
-\item \code{search_nabble}: 
+\item \code{search_nabble()}: 
 
-\item \code{search_google}: 
+\item \code{search_google()}: 
 
-\item \code{search_rproject}: 
+\item \code{search_rproject()}: 
 
-\item \code{search_metacran}: 
+\item \code{search_metacran()}: 
+
 }}
-
 \examples{
 # default search on google
 search_online("polished.tech")
