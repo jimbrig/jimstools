@@ -14,7 +14,7 @@ inform(...)
 list}. The first element is displayed as an \emph{alert} bullet
 prefixed with \code{!} by default. Elements named \code{"*"}, \code{"i"}, \code{"v"},
 \code{"x"}, and \code{"!"} are formatted as regular, info, success,
-failure, and error bullets respectively. Se\ifelse{html}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}})`
+failure, and error bullets respectively. See \ifelse{html}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}}{\link[rlang:topic-condition-formatting]{Formatting messages with cli}}
 for more about bulleted messaging.
 
 If a message is not supplied, it is expected that the message is
