@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![R-CMD-check](https://github.com/jimbrig/jimstools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jimbrig/jimstools/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## About
