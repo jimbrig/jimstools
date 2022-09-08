@@ -13,6 +13,11 @@
 - Autopublish 2022-09-08T04:55:10Z
 - Autopublish 2022-09-08T05:00:41Z
 - Autopublish 2022-09-08T05:02:24Z
+- Autopublish 2022-09-08T05:05:54Z
+
+### Release
+
+- Bump VERSION
 
 ## [0.4.0] - 2022-09-08
 
